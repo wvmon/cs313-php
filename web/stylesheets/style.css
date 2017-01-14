@@ -9,13 +9,17 @@ body {
 .center {
     position: relative;
     padding-top: 25px;
+    text-align: center;
 }
 
-.image {    
+.images {
     transition: all 0.5s;
+    width: auto;
+    height: 100%;
+    text-align: center;
 }
 
-.image:hover {
+.images:hover {
     transform: scale(1.15);
 }
 
@@ -46,11 +50,22 @@ h2 {
     top: 30%;
     left: 10%;
     width: 80%;
+    color: #6E6E6E;
+}
+
+h3 {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 80%;
+    font-weight: 600;
+    color: #FFF2E7;
 }
 
 .col-sm-4 {
     padding-top: 50px;
     padding-bottom: 50px;
+    text-transform: uppercase;
 }
 
 .foot {
