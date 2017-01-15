@@ -38,14 +38,10 @@ body {
     border-width: 5px 5px 5px 5px;
     padding: 5px 7px;
     font-weight: 800;
-    margin: 20px 30px;
+    margin: 10px 30px;
     transition: all 0.5s;
     display: block;
     float: left;
-}
-
-.navbar-header {
-    float: right;
 }
 
 .header-icon:hover {
@@ -87,8 +83,31 @@ h3 {
     padding: 20px 0px;
 }
 
-.para, html {
-    height: 100%;
+.clearfix {
+    color: aliceblue;
+    text-align: justify;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    opacity: 0.60;
+}
+
+.caption p.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
 }
 
 .about {
@@ -100,35 +119,53 @@ h3 {
     text-align: justify;
 }
 
-.bgimg-1 {
-    background-image: url('../images/waterfall.JPG');
+.bgimg-0 {
+    background-image: url('../images/me.JPG');
+    position: relative;
     min-height: 800px;
     background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgimg-1 {
+    background-image: url('../images/waterfall.JPG');
+    position: relative;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;    
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
 .bgimg-2 {
      background-image: url('../images/yellowstone.JPG');
+    position: relative;
     min-height: 500px;
     background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
 .bgimg-3 {
     background-image: url('../images/creek.JPG');
+    position: relative;
     min-height: 500px;
     background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
 .bgimg-4 {
     background-image: url('../images/twin_falls.JPG');
+    position: relative;
     min-height: 500px;
     background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
