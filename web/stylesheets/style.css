@@ -4,6 +4,13 @@ body {
 
 .navbar-default {
     background-color: #393939;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+}
+
+.main-body {
+    padding-top: 100px;
 }
 
 .center {
@@ -21,9 +28,10 @@ body {
 
 .images:hover {
     transform: scale(1.15);
+    box-shadow: 0px 0px 50px 5px #FFD464;
 }
 
-h1 {
+.header-icon {
     border-style: solid;
     border-color: #9a9a9a;
     color: #9a9a9a;
@@ -40,7 +48,7 @@ h1 {
     float: right;
 }
 
-h1:hover {
+.header-icon:hover {
     border-color: #ffffff;
     color: #ffffff;
 }
@@ -67,9 +75,9 @@ h3 {
 }
 
 .col-sm-4 {
-    padding-top: 50px;
-    padding-bottom: 50px;
     text-transform: uppercase;
+    margin: 35px 15px;
+    padding: 0;
 }
 
 .foot {
@@ -122,4 +130,10 @@ h3 {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+        background-attachment: scroll;
+    }
 }
