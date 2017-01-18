@@ -83,6 +83,10 @@ h3 {
     padding: 20px 0px;
 }
 
+.foot p {
+    margin: 0px;
+}
+
 .clearfix {
     color: aliceblue;
     text-align: justify;
