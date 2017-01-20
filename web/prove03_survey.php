@@ -105,7 +105,7 @@
         } else if ($answer == "DC") {
             $dc++;
         } else if ($answer == "Other1") {
-            $other_1++:
+            $other_1++;
         }
         
         $answer = $_POST["Sports"];
@@ -120,7 +120,7 @@
         } else if ($answer == "Basketball") {
             $basketball++;
         } else if ($answer == "Hockey") {
-            $hockey++:
+            $hockey++;
         } else if ($answer == "Other2") {
             $other_2;
         }
