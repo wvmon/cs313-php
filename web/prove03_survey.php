@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if ($_COOKIE["submitted"] == "yes") {
+    if ($_COOKIE["Submit"] == "yes") {
         header("Location: https://safe-wildwood-47417.herokuapp.com/results.php");
         exit(); // for security measures use this method
     }
@@ -30,6 +30,43 @@
         $filename = "db/results.txt";
         $results = file_get_contents($filename);
         $results = explode("|", results);
+        
+        $pop = (int)$results[0];
+        $rock = (int)$results[1];
+        $jazz = (int)$results[2];
+        $country = (int)$results[3];
+        $rap = (int)$results[4];
+        $alternative = (int)$results[5];
+        $metal = (int)$results[6];
+        $bluegrass = (int)$results[7];
+        $classical = (int)$results[8];
+        $other = (int)$results[9];
+        $ny = (int)$results[10];
+        $la = (int)$results[11];
+        $lv = (int)$results[12];
+        $ch = (int)$results[13];
+        $se = (int)$results[14];
+        $dc = (int)$results[15];
+        $other_1 = (int)$results[16];
+        $football = (int)$results[17];
+        $soccer = (int)$results[18];
+        $baseball = (int)$results[19];
+        $tennis = (int)$results[20];
+        $basketball = (int)$results[21];
+        $hockey = (int)$results[22];
+        $other_2 = (int)$results[23];
+        $cat = (int)$results[24];
+        $dog = (int)$results[25];
+        $parrot = (int)$results[26];
+        $snake = (int)$results[27];
+        $shark = (int)$results[28];
+        $hamster = (int)$results[29];
+        $bunny = (int)$results[30];
+        $ponny = (int)$results[31];
+        $monkey = (int)$results[32];
+        $lizard = (int)$results[33];
+        $pig = (int)$results[34];
+        $other_3 = (int)$results[35];
     }
 ?>
 <!DOCTYPE html>
@@ -67,8 +104,7 @@
                         <input type="checkbox" name="Music" value="Metal"> Metal
                         <input type="checkbox" name="Music" value="Bluegrass"> Bluegrass
                         <input type="checkbox" name="Music" value="Classical"> Classical<br/>
-                        <input type="checkbox" name="Music" value="Other"> Other
-                        <input type="checkbox" name="Music" value="None"> None<br/><br/>
+                        <input type="checkbox" name="Music" value="Other"> Other<br/><br/>
                         
                         <label>What's your favorite city?</label><br/>
                         <input type="radio" name="City" value="New York"> New York<br/>
@@ -77,8 +113,7 @@
                         <input type="radio" name="City" value="Chicago"> Chicago<br/>
                         <input type="radio" name="City" value="Seattle"> Seattle<br>
                         <input type="radio" name="City" value="DC"> DC<br/>
-                        <input type="radio" name="City" value="Other"> Other<br/>
-                        <input type="radio" name="City" value="None"> None<br/><br/>
+                        <input type="radio" name="City" value="Other1"> Other<br/>
                         
                         <label>What's your favorite sport</label><br/>
                         <input type="radio" name="Sports" value="Football"> Football<br/>
@@ -87,7 +122,7 @@
                         <input type="radio" name="Sports" value="Tennis"> Tennis<br/>
                         <input type="radio" name="Sports" value="Basketball"> Basketball<br>
                         <input type="radio" name="Sports" value="Hockey"> Hockey<br/>
-                        <input type="radio" name="Sports" value="I don't play sports"> I don't play sports<br/><br/>
+                        <input type="radio" name="Sports" value="Other2"> Other<br/><br/>
                         
                         <label>What's your favorite pet?</label><br/>
                         <input type="checkbox" name="Pets" value="Cat"> Cat
@@ -101,8 +136,9 @@
                         <input type="checkbox" name="Pets" value="Monkey"> Monkey<br/>
                         <input type="checkbox" name="Pets" value="Lizard"> Lizard
                         <input type="checkbox" name="Pets" value="Pig"> Pig
-                        <input type="checkbox" name="Pets" value="Other"> Other<br/>
-                        <input type="checkbox" name="Pets" value="None, I'm allergic to all of them"> None, I'm allergic to all of them<br/><br/>
+                        <input type="checkbox" name="Pets" value="Other3"> Other<br/><br/>
+                        
+                        <label>Submit</label><input type="submit" name="submit" value="Submit"><br/>
                     </form>
                 </div>
             </div>
