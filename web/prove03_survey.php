@@ -67,6 +67,101 @@
         $lizard = (int)$results[33];
         $pig = (int)$results[34];
         $other_3 = (int)$results[35];
+        
+        $answer = $_POST["Music"];
+        if ($answer == "Pop") {
+            $pop++;
+        } else if ($answer == "Rock") {
+            $rock++;
+        } else if ($answer == "Jazz") {
+            $jazz++;
+        } else if ($answer == "Country") {
+            $country++;
+        } else if ($answer == "Rap") {
+            $rap++;
+        } else if ($answer == "Alternative") {
+            $alternative++;
+        } else if ($answer == "Metal") {
+            $metal++;
+        } else if ($answer == "Bluegrass") {
+            $bluegrass++;
+        } else if ($answer == "Classical") {
+            $classical++;
+        } else if ($answer == "Other") {
+            $other++;
+        }
+        
+        $answer = $_POST["City"];
+        if ($answer == "New York") {
+            $ny++;
+        } else if ($answer == "Los Angeles") {
+            $la++;
+        } else if ($answer == "Las Vegas") {
+            $lv++;
+        } else if ($answer == "Chicago") {
+            $ch++;
+        } else if ($answer == "Seattle") {
+            $se++;
+        } else if ($answer == "DC") {
+            $dc++;
+        } else if ($answer == "Other1") {
+            $other_1++:
+        }
+        
+        $answer = $_POST["Sports"];
+        if ($answer == "New York") {
+            $ny++;
+        } else if ($answer == "Football") {
+            $football++;
+        } else if ($answer == "Soccer") {
+            $soccer++;
+        } else if ($answer == "Baseball") {
+            $baseball++;
+        } else if ($answer == "Tennis") {
+            $tennis++;
+        } else if ($answer == "Basketball") {
+            $basketball++;
+        } else if ($answer == "Hockey") {
+            $hockey++:
+        } else if ($answer == "Other2") {
+            $other_2;
+        }
+        
+        $answer = $_POST["Pets"];
+        if ($answer == "Cat") {
+            $cat++;
+        } else if ($answer == "Dog") {
+            $dog++;
+        } else if ($answer == "Parrot") {
+            $parrot++;
+        } else if ($answer == "Snake") {
+            $snake++;
+        } else if ($answer == "Shark") {
+            $shark++;
+        } else if ($answer == "Hamster") {
+            $hamster++;
+        } else if ($answer == "Bunny") {
+            $bunny++;
+        } else if ($answer == "Ponny") {
+            $ponny++;
+        } else if ($answer == "Monkey") {
+            $monkey++;
+        } else if ($answer == "Lizard") {
+            $lizard++;
+        } else if ($answer == "Pig") {
+            $pig++;
+        } else if ($answer == "Other3") {
+            $other_3++;
+        }
+        
+        $results = $pop."|".$rock."|".$jazz."|".$country."|".$rap."|".$alternative."|".$metal."|".$bluegrass."|".$classical."|".$other."|".$ny."|".$lae."|".$lv."|".$ch."|".$se."|".$dc."|".$other_1."|".$football."|".$soccer."|".$baseball."|".$tennis."|".$basketball."|".$hockey."|".$other_2."|".$cat."|".$dog."|".$parrot."|".$snake."|".$shark."|".hamster."|".$bunny."|".$ponny."|".$monkey."|".lizard."|".$pig."|".$other_3;
+        
+        file_put_contents($filename, $results);
+        setcookie("Submit", "yes");
+        echo "set cookies";
+        
+        header("Location: https://safe-wildwood-47417.herokuapp.com/results.php");
+        exit();
     }
 ?>
 <!DOCTYPE html>
@@ -138,7 +233,7 @@
                         <input type="checkbox" name="Pets" value="Pig"> Pig
                         <input type="checkbox" name="Pets" value="Other3"> Other<br/><br/>
                         
-                        <label>Submit</label><input type="submit" name="submit" value="Submit"><br/>
+                        <input type="submit" name="submit" value="Submit"><br/>
                     </form>
                 </div>
             </div>
