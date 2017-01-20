@@ -25,7 +25,7 @@
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4 survey">
 			<?php
-			 echo("<p>Here are the results for favorite Music:</p><br/>"):
+			 echo("<p>Here are the results for favorite Music:</p><br/>");
                 echo "Pop: "; echo $results[0];
 				echo "<br/>";
 				echo "Rock: "; echo $results[1];
@@ -47,7 +47,7 @@
                 echo "Other: "; echo $results[9];
 				echo "<br/><br/>";
                 
-                echo("<p>Here are the results for favorite City:</p><br/>"):
+                echo("<p>Here are the results for favorite City:</p><br/>");
                 echo "New York: "; echo $results[10];
 				echo "<br/>";
 				echo "Los Angeles: "; echo $results[11];
@@ -63,7 +63,7 @@
                 echo "Other: "; echo $results[16];
 				echo "<br/><br/>";
                 
-                echo("<p>Here are the results for favorite City:</p><br/>"):
+                echo("<p>Here are the results for favorite sport:</p><br/>");
                 echo "Football: "; echo $results[17];
 				echo "<br/>";
 				echo "Soccer: "; echo $results[18];
@@ -79,6 +79,7 @@
                 echo "Other: "; echo $results[23];
 				echo "<br/><br/>";
                 
+                echo("<p>Here are the results for favorite pet:</p><br/>");
                 echo "Cat: "; echo $results[24];
 				echo "<br/>";
 				echo "Dog: "; echo $results[25];
