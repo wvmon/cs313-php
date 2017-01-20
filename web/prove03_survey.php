@@ -154,7 +154,7 @@
             $other_3++;
         }
         
-        $results = $pop."|".$rock."|".$jazz."|".$country."|".$rap."|".$alternative."|".$metal."|".$bluegrass."|".$classical."|".$other."|".$ny."|".$lae."|".$lv."|".$ch."|".$se."|".$dc."|".$other_1."|".$football."|".$soccer."|".$baseball."|".$tennis."|".$basketball."|".$hockey."|".$other_2."|".$cat."|".$dog."|".$parrot."|".$snake."|".$shark."|".hamster."|".$bunny."|".$ponny."|".$monkey."|".lizard."|".$pig."|".$other_3;
+        $results = $pop."|".$rock."|".$jazz."|".$country."|".$rap."|".$alternative."|".$metal."|".$bluegrass."|".$classical."|".$other."|".$ny."|".$lae."|".$lv."|".$ch."|".$se."|".$dc."|".$other_1."|".$football."|".$soccer."|".$baseball."|".$tennis."|".$basketball."|".$hockey."|".$other_2."|".$cat."|".$dog."|".$parrot."|".$snake."|".$shark."|".hamster."|".$bunny."|".$ponny."|".$monkey."|".$lizard."|".$pig."|".$other_3;
         
         file_put_contents($filename, $results);
         setcookie("Submit", "yes");
