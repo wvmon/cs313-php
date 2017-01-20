@@ -208,7 +208,7 @@
                         <input type="radio" name="City" value="DC"> DC<br/>
                         <input type="radio" name="City" value="Other1"> Other<br/>
                         
-                        <label>What's your favorite sport</label><br/>
+                        <label>What's your favorite sport></label><br/>
                         <input type="radio" name="Sports" value="Football"> Football<br/>
                         <input type="radio" name="Sports" value="Soccer"> Soccer<br/>
                         <input type="radio" name="Sports" value="Baseball"> Baseball<br/>
