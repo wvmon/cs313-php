@@ -1,7 +1,7 @@
 <?php
-	/*$filename = "db/results.txt";
+	$filename = "db/results.txt";
 	$results = file_get_contents($filename);
-	$results = explode("|", $results);*/
+	$results = explode("|", $results);
 ?>
 
 <!DOCTYPE html>
