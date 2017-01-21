@@ -25,7 +25,7 @@
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4 survey">
 			<?php
-			 /*echo("<p>Here are the results for favorite Music:</p><br/>");
+			 echo("<p>Here are the results for favorite Music:</p><br/>");
                 echo "Pop: "; echo $results[0];
 				echo "<br/>";
 				echo "Rock: "; echo $results[1];
@@ -103,7 +103,7 @@
 				echo "Pig: "; echo $results[34];
                 echo "<br/>";
                 echo "Other: "; echo $results[35];
-				echo "<br/><br/>";*/             
+				echo "<br/><br/>";
 			?>
 			</div>
             <div class="col-sm-12 text-center oldGloryRed">

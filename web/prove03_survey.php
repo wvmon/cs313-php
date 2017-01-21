@@ -5,7 +5,7 @@
         exit(); // for security measures use this method
     }
     
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $error_msg = "";
         $valid = true;
         if (empty($_POST["Music"])) {
@@ -24,7 +24,6 @@
             $error .= "<li> You did not pick from the Genre catalog.</li>";
             $valid = false;
         }
-    }
 
     if ($valid) {
         $filename = "db/results.txt";
@@ -160,6 +159,7 @@
         
         header("Location: https://safe-wildwood-47417.herokuapp.com/results.php");
         exit();
+    }
     }
 ?>
 <!DOCTYPE html>
