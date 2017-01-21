@@ -176,6 +176,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
+                    <h1>Welcome to this Survey!!!</h1>
                     <?php
                         if(!empty($error)) {
                             echo("<p>Something went wrong with the survey.</p>");
@@ -188,14 +189,14 @@
                 <div class="col-sm-4">
                     <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
                         <label>What music do you like to listen to?</label><br/>
-                        <input type="radio" name="Music" value="Pop"> Pop
-                        <input type="radio" name="Music" value="Rock"> Rock
+                        <input type="radio" name="Music" value="Pop"> Pop<br/>
+                        <input type="radio" name="Music" value="Rock"> Rock<br/>
                         <input type="radio" name="Music" value="Jazz"> Jazz<br/>
                         <input type="radio" name="Music" value="Country"> Country
-                        <input type="radio" name="Music" value="Rap"> Rap
+                        <input type="radio" name="Music" value="Rap"> Rap<br/>
                         <input type="radio" name="Music" value="Alternative"> Alternative<br/>
-                        <input type="radio" name="Music" value="Metal"> Metal
-                        <input type="radio" name="Music" value="Bluegrass"> Bluegrass
+                        <input type="radio" name="Music" value="Metal"> Metal<br/>
+                        <input type="radio" name="Music" value="Bluegrass"> Bluegrass<br/>
                         <input type="radio" name="Music" value="Classical"> Classical<br/>
                         <input type="radio" name="Music" value="Other"> Other<br/><br/>
                         
@@ -218,17 +219,17 @@
                         <input type="radio" name="Sports" value="Other2"> Other<br/><br/>
                         
                         <label>What's your favorite pet?</label><br/>
-                        <input type="radio" name="Pets" value="Cat"> Cat
-                        <input type="radio" name="Pets" value="Dog"> Dog
+                        <input type="radio" name="Pets" value="Cat"> Cat<br/>
+                        <input type="radio" name="Pets" value="Dog"> Dog<br/>
                         <input type="radio" name="Pets" value="Parrot"> Parrot<br/>
-                        <input type="radio" name="Pets" value="Snake"> Snake
-                        <input type="radio" name="Pets" value="Shark"> Shark
+                        <input type="radio" name="Pets" value="Snake"> Snake<br/>
+                        <input type="radio" name="Pets" value="Shark"> Shark<br/>
                         <input type="radio" name="Pets" value="Hamster"> Hamster<br/>
-                        <input type="radio" name="Pets" value="Bunny"> Bunny
-                        <input type="radio" name="Pets" value="Ponny"> Ponny
+                        <input type="radio" name="Pets" value="Bunny"> Bunny<br/>
+                        <input type="radio" name="Pets" value="Ponny"> Ponny<br/>
                         <input type="radio" name="Pets" value="Monkey"> Monkey<br/>
-                        <input type="radio" name="Pets" value="Lizard"> Lizard
-                        <input type="radio" name="Pets" value="Pig"> Pig
+                        <input type="radio" name="Pets" value="Lizard"> Lizard<br/>
+                        <input type="radio" name="Pets" value="Pig"> Pig<br/>
                         <input type="radio" name="Pets" value="Other3"> Other<br/><br/>
                         
                         <input type="submit" name="submit" value="Submit"><br/>
