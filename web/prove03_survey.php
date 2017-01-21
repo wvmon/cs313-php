@@ -175,7 +175,7 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 text-center">
+                <div class="col-sm-12 text-center">
                     <?php
                         if(!empty($error)) {
                             echo("<p>Something went wrong with the survey.</p>");
@@ -185,7 +185,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 text-center">
+                <div class="col-sm-4">
                     <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
                         <label>What music do you like to listen to?</label><br/>
                         <input type="radio" name="Music" value="Pop"> Pop

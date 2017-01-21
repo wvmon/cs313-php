@@ -15,14 +15,13 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="container-fluid backgd">
+        <div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12 text-center">
 				<h1>Results of Survey:</h1>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-4"></div>
 			<div class="col-sm-4 survey">
 			<?php
 			 echo"<p>Here are the results for favorite Music:</p><br/>";
