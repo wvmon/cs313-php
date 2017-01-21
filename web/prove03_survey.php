@@ -188,16 +188,16 @@
                 <div class="col-sm-6">
                     <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
                         <label>What music do you like to listen to?</label><br/>
-                        <input type="checkbox" name="Music" value="Pop"> Pop
-                        <input type="checkbox" name="Music" value="Rock"> Rock
-                        <input type="checkbox" name="Music" value="Jazz"> Jazz<br/>
-                        <input type="checkbox" name="Music" value="Country"> Country
-                        <input type="checkbox" name="Music" value="Rap"> Rap
-                        <input type="checkbox" name="Music" value="Alternative"> Alternative<br/>
-                        <input type="checkbox" name="Music" value="Metal"> Metal
-                        <input type="checkbox" name="Music" value="Bluegrass"> Bluegrass
-                        <input type="checkbox" name="Music" value="Classical"> Classical<br/>
-                        <input type="checkbox" name="Music" value="Other"> Other<br/><br/>
+                        <input type="radio" name="Music" value="Pop"> Pop
+                        <input type="radio" name="Music" value="Rock"> Rock
+                        <input type="radio" name="Music" value="Jazz"> Jazz<br/>
+                        <input type="radio" name="Music" value="Country"> Country
+                        <input type="radio" name="Music" value="Rap"> Rap
+                        <input type="radio" name="Music" value="Alternative"> Alternative<br/>
+                        <input type="radio" name="Music" value="Metal"> Metal
+                        <input type="radio" name="Music" value="Bluegrass"> Bluegrass
+                        <input type="radio" name="Music" value="Classical"> Classical<br/>
+                        <input type="radio" name="Music" value="Other"> Other<br/><br/>
                         
                         <label>What's your favorite city?</label><br/>
                         <input type="radio" name="City" value="New York"> New York<br/>
@@ -218,18 +218,18 @@
                         <input type="radio" name="Sports" value="Other2"> Other<br/><br/>
                         
                         <label>What's your favorite pet?</label><br/>
-                        <input type="checkbox" name="Pets" value="Cat"> Cat
-                        <input type="checkbox" name="Pets" value="Dog"> Dog
-                        <input type="checkbox" name="Pets" value="Parrot"> Parrot<br/>
-                        <input type="checkbox" name="Pets" value="Snake"> Snake
-                        <input type="checkbox" name="Pets" value="Shark"> Shark
-                        <input type="checkbox" name="Pets" value="Hamster"> Hamster<br/>
-                        <input type="checkbox" name="Pets" value="Bunny"> Bunny
-                        <input type="checkbox" name="Pets" value="Ponny"> Ponny
-                        <input type="checkbox" name="Pets" value="Monkey"> Monkey<br/>
-                        <input type="checkbox" name="Pets" value="Lizard"> Lizard
-                        <input type="checkbox" name="Pets" value="Pig"> Pig
-                        <input type="checkbox" name="Pets" value="Other3"> Other<br/><br/>
+                        <input type="radio" name="Pets" value="Cat"> Cat
+                        <input type="radio" name="Pets" value="Dog"> Dog
+                        <input type="radio" name="Pets" value="Parrot"> Parrot<br/>
+                        <input type="radio" name="Pets" value="Snake"> Snake
+                        <input type="radio" name="Pets" value="Shark"> Shark
+                        <input type="radio" name="Pets" value="Hamster"> Hamster<br/>
+                        <input type="radio" name="Pets" value="Bunny"> Bunny
+                        <input type="radio" name="Pets" value="Ponny"> Ponny
+                        <input type="radio" name="Pets" value="Monkey"> Monkey<br/>
+                        <input type="radio" name="Pets" value="Lizard"> Lizard
+                        <input type="radio" name="Pets" value="Pig"> Pig
+                        <input type="radio" name="Pets" value="Other3"> Other<br/><br/>
                         
                         <input type="submit" name="submit" value="submitted"><br/>
                     </form>
