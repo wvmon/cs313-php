@@ -5,7 +5,7 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>William Montesdeoca</title>
         <meta charset="utf-8">
@@ -18,14 +18,14 @@
         <div class="container-fluid backgd">
 		<div class="row">
 			<div class="col-sm-12 text-center oldGloryRed">
-				<h1>2016 Political Survey Results</h1>
+				<h1>Results of Survey</h1>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-4"></div>
 			<div class="col-sm-4 survey">
 			<?php
-			 echo("<p>Here are the results for favorite Music:</p><br/>");
+			 /*echo("<p>Here are the results for favorite Music:</p><br/>");
                 echo "Pop: "; echo $results[0];
 				echo "<br/>";
 				echo "Rock: "; echo $results[1];
@@ -103,13 +103,10 @@
 				echo "Pig: "; echo $results[34];
                 echo "<br/>";
                 echo "Other: "; echo $results[35];
-				echo "<br/><br/>";               
+				echo "<br/><br/>";*/             
 			?>
 			</div>
             <div class="col-sm-12 text-center oldGloryRed">
-				<h7>Thank you for your responses!</h7>
-			</div>
-			<div class="col-sm-12 text-center oldGloryRed">
 				<h7>Thank you for your responses!</h7>
 			</div>
 		</div>
