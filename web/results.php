@@ -17,8 +17,8 @@
     <body>
         <div class="container-fluid backgd">
 		<div class="row">
-			<div class="col-sm-12 text-center oldGloryRed">
-				<h1>Results of Survey</h1>
+			<div class="col-sm-12 text-center">
+				<h1>Results of Survey:</h1>
 			</div>
 		</div>
 		<div class="row">
@@ -106,7 +106,7 @@
 				echo "<br/><br/>";
 			?>
 			</div>
-            <div class="col-sm-12 text-center oldGloryRed">
+            <div class="col-sm-12 text-center">
 				<h7>Thank you for your responses!</h7>
 			</div>
 		</div>
