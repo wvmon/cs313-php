@@ -1,6 +1,6 @@
 <?php
     session_start();
-    /*if ($_COOKIE["submitted"] == "yes") {
+    /*if ($_COOKIE["Submit"] == "yes") {
         header("Location: https://safe-wildwood-47417.herokuapp.com/results.php");
         exit(); // for security measures use this method
     }*/
@@ -121,7 +121,7 @@
             } else if ($answer == "Hockey") {
                 $hockey++;
             } else if ($answer == "Other2") {
-                $other_2;
+                $other_2++;
             }
 
             $answer = $_POST["Pets"];
@@ -154,7 +154,7 @@
             $results = $pop."|".$rock."|".$jazz."|".$country."|".$rap."|".$alternative."|".$metal."|".$bluegrass."|".$classical."|".$other."|".$ny."|".$la."|".$lv."|".$ch."|".$se."|".$dc."|".$other_1."|".$football."|".$soccer."|".$baseball."|".$tennis."|".$basketball."|".$hockey."|".$other_2."|".$cat."|".$dog."|".$parrot."|".$snake."|".$shark."|".$hamster."|".$bunny."|".$ponny."|".$monkey."|".$lizard."|".$pig."|".$other_3;
 
             file_put_contents($filename, $results);
-            setcookie("submitted", "yes");
+            setcookie("Submit", "yes");
             echo "set cookies";
 
             header("Location: https://safe-wildwood-47417.herokuapp.com/results.php");
@@ -208,7 +208,7 @@
                         <input type="radio" name="City" value="DC"> DC<br/>
                         <input type="radio" name="City" value="Other1"> Other<br/>
                         
-                        <label>What's your favorite sport></label><br/>
+                        <label>What's your favorite sport?</label><br/>
                         <input type="radio" name="Sports" value="Football"> Football<br/>
                         <input type="radio" name="Sports" value="Soccer"> Soccer<br/>
                         <input type="radio" name="Sports" value="Baseball"> Baseball<br/>
@@ -231,7 +231,7 @@
                         <input type="radio" name="Pets" value="Pig"> Pig
                         <input type="radio" name="Pets" value="Other3"> Other<br/><br/>
                         
-                        <input type="submit" name="submit" value="submitted"><br/>
+                        <input type="submit" name="submit" value="Submit"><br/>
                     </form>
                 </div>
             </div>
