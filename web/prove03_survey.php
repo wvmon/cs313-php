@@ -165,7 +165,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>William Montesdeoca</title>
+        <title>Porve03 - Survey</title>
         <meta charset="utf-8">
         <meta name="viewort" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -179,7 +179,7 @@
                     <h1>Welcome to this Survey!!!</h1>
                     <?php
                         if(!empty($error)) {
-                            echo("<p>Something went wrong with the survey.</p>");
+                            echo("<p>OOPS... Something went wrong with the survey.</p>");
                             echo("<ul>" . $error_msg . "</ul>");
                         }
                     ?>
@@ -192,7 +192,7 @@
                         <input type="radio" name="Music" value="Pop"> Pop<br/>
                         <input type="radio" name="Music" value="Rock"> Rock<br/>
                         <input type="radio" name="Music" value="Jazz"> Jazz<br/>
-                        <input type="radio" name="Music" value="Country"> Country
+                        <input type="radio" name="Music" value="Country"> Country<br/>
                         <input type="radio" name="Music" value="Rap"> Rap<br/>
                         <input type="radio" name="Music" value="Alternative"> Alternative<br/>
                         <input type="radio" name="Music" value="Metal"> Metal<br/>
@@ -207,7 +207,7 @@
                         <input type="radio" name="City" value="Chicago"> Chicago<br/>
                         <input type="radio" name="City" value="Seattle"> Seattle<br>
                         <input type="radio" name="City" value="DC"> DC<br/>
-                        <input type="radio" name="City" value="Other1"> Other<br/>
+                        <input type="radio" name="City" value="Other1"> Other<br/><br/>
                         
                         <label>What's your favorite sport?</label><br/>
                         <input type="radio" name="Sports" value="Football"> Football<br/>
