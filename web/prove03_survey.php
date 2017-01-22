@@ -1,9 +1,9 @@
 <?php
     session_start();
-    /*if ($_COOKIE["Submit"] == "yes") {
+    if ($_COOKIE["Submit"] == "yes") {
         header("Location: https://safe-wildwood-47417.herokuapp.com/results.php");
         exit(); // for security measures use this method
-    }*/
+    }
     
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $error_msg = "";
