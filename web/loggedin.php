@@ -22,7 +22,7 @@
                     $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
                     $username = $_POST['username'];
                     $password = $_POST['password'];
-                    $q = "SELECT password FROM users WHERE username='".$username."'";
+                    $q = "SELECT password FROM users WHERE username=$username";
                     foreach ($db->query($q) as $row) {
                         if (password_verify($password, $row['password'])) {
                             $_SESSION['loggedin'] = $username;
