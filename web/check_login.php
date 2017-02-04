@@ -16,7 +16,7 @@
             session_start();
             $dbUrl = getenv('DATABASE_URL');
             if (empty($dbUrl)) {
-                $dbUrl = "postgres://postgres:password@localhost:5432/cs313db";
+                $dbUrl = "postgres://postgres:lz3f445r@localhost:5432/cs313db";
             }
             $dbopts = parse_url($dbUrl);
             $dbHost = $dbopts["host"];
