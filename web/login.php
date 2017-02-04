@@ -1,10 +1,6 @@
 <?php
-
-session_start();
-	if (isset($_SESSION['check_login'])) {
-		header("Location: check_login.php");
-		exit;
-	}
+require "dbConnect.php";
+$db = get_db();
 ?>
     
 <!DOCTYPE html>
@@ -34,7 +30,6 @@ session_start();
                             </div>                                
                         </fieldset>                    
                     </form>
-                    <span id="error" class="errorspan"><?php echo $_SESSION['error']; ?></span>
                 </div>
                 <div class="col-lg-4"></div>
             </div>                   
