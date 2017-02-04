@@ -52,6 +52,7 @@
                 exit;
             }
             ?>
+            <p>Hello!</p>
         </div>
     </div>
 </body>
