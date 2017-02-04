@@ -1,6 +1,8 @@
 <?php
+
 require "dbConnect.php";
 $db = get_db();
+
 ?>
     
 <!DOCTYPE html>
@@ -30,6 +32,7 @@ $db = get_db();
                             </div>                                
                         </fieldset>                    
                     </form>
+                    <span id="error" class="errorspan"><?php echo $_SESSION['error']; ?></span>
                 </div>
                 <div class="col-lg-4"></div>
             </div>                   
