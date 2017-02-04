@@ -38,8 +38,8 @@ session_start();
                         <fieldset>
                             <legend class="legend">Login</legend>
                             <div class="form_stuff">
-                                <input type="text" name="username" class="login" placeholder="Username"><br><br>
-                                <input type="password" name="password" class="login" placeholder="Password"><br><br>
+                                <input type="text" id="username" name="username" class="login" placeholder="Username"><br><br>
+                                <input type="password" id="password" name="password" class="login" placeholder="Password"><br><br>
                                 <input type="submit" name="login" class="btn" value="Login"><br><br>
                                 <a href="signup.php">Register for an account</a>
                             </div>                                
