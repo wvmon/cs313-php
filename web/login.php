@@ -17,17 +17,6 @@ session_start();
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script>
-            function check_empty() {
-                if (document.getElementById('username').value == "" || document.getElementById('password').value == "" ) {
-                    //alert("Please fill out all fields.");
-                    document.getElementById("error").textContent= "Empty fields exist.";
-                    return false;
-                } else {
-                    document.getElementById('form').submit();
-                }
-            }
-	    </script>
     </head>
     <body>
         <div class="container">
