@@ -19,8 +19,8 @@
                 $dbUrl = "postgres://postgres:password@localhost:5432/cs313db";
             }
             $dbopts = parse_url($dbUrl);
-            $dbHost = $dbopts["host"];
-            $dbPort = $dbopts["port"];
+            $dbHost = $dbopts[127.0.0.1];
+            $dbPort = $dbopts[5432];
             $dbUser = $dbopts["user"];
             $dbPassword = $dbopts["pass"];
             $dbName = ltrim($dbopts["path"],'/');
@@ -28,7 +28,7 @@
                 try {
                     $username = $_POST['username'];
                     $password = $_POST['password'];
-                    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+                    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=cs313db", $dbUser, $dbPassword);
                     $q = "SELECT password FROM users WHERE username='".$username."'";
                     foreach ($db->query($q) as $row) {
                         if (password_verify($password, $row['password'])) {
