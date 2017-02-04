@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewort" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheets/stylesheet.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
     <body>
         <div class="row headerBox">
         <div class="col-sm-12">
-            <h1 class="headerText">Student Budget</h1>        
+            <h1 class="headerText">Check to see if credentials</h1>        
             <?php
             session_start();
             $dbUrl = getenv('DATABASE_URL');
@@ -22,7 +29,7 @@
                     $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
                     $username = $_POST['username'];
                     $password = $_POST['password'];
-                    $q = "SELECT password FROM users WHERE username=$username";
+                    $q = "SELECT password FROM users WHERE username='".$username."'";
                     foreach ($db->query($q) as $row) {
                         if (password_verify($password, $row['password'])) {
                             $_SESSION['loggedin'] = $username;
