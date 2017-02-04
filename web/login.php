@@ -1,6 +1,12 @@
 <?php
 require "dbConnect.php";
 $db = get_db();
+
+session_start();
+if (isset($_SESSION['loggedin'])) {
+    header("Location: loggedin.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +25,7 @@ $db = get_db();
             <div class="row">
                 <div class="col-lg-4"></div>
                 <div class="col-lg-4">
-                    <form action="." method="POST">
+                    <form action="loggedin.php" method="POST">
                         <fieldset>
                             <legend class="legend">Login</legend>
                             <div class="form_stuff">
