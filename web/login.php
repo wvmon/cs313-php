@@ -35,8 +35,8 @@ if (isset($_SESSION['loggedin'])) {
                             </div>                                
                         </fieldset>                    
                     </form>
-                    <span>Username: <?php echo $username ?></span><br>
-                    <span>Password: <?php echo $password ?></span>
+                    <span>Username: <?php echo $username; ?></span><br>
+                    <span>Password: <?php echo $password; ?></span>
                 </div>
                 <div class="col-lg-4"></div>
             </div>                   
