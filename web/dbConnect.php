@@ -4,7 +4,7 @@ function get_db() {
 	try {
 		$dbUrl = getenv('DATABASE_URL');
 		if (!isset($dbUrl) || empty($dbUrl)) {
-			$dbUrl = "postgres://postgres:lz3f445r@localhost:5432/cs313db";
+			$dbUrl = "postgres://postgres:password@localhost:5432/cs313db";
 		}
 		// Get the various parts of the DB Connection from the URL
 		$dbopts = parse_url($dbUrl);
