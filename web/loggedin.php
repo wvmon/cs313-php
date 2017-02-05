@@ -1,3 +1,10 @@
+<?php
+
+require "dbConnect.php";
+$db = get_db();
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,6 +16,11 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        
+        <?php
+        session_start();
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            
+        }
+        ?>
     </body>
 </html>

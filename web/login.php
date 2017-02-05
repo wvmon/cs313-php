@@ -1,12 +1,11 @@
 <?php
-require "dbConnect.php";
-$db = get_db();
 
 session_start();
 if (isset($_SESSION['loggedin'])) {
     header("Location: loggedin.php");
     exit;
 }
+
 ?>
 
 <!DOCTYPE html>
