@@ -35,8 +35,8 @@ if (isset($_SESSION['loggedin'])) {
                             </div>                                
                         </fieldset>                    
                     </form>
-                    Username: <?php echo $_POST["username"]; ?><br>
-                    Password: <?php echo $_POST["password"]; ?>
+                    <span>Username: <?php echo $_POST["username"]; ?></span><br>
+                    <span>Password: <?php echo $_POST["password"]; ?></span>
                 </div>
                 <div class="col-lg-4"></div>
             </div>                   
