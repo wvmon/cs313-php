@@ -17,7 +17,6 @@ $db = get_db();
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <h1>Are you logged in?</h1>
         <?php
         session_start();
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
