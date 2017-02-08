@@ -37,8 +37,10 @@ $db = get_db();*/
                     $password = $_POST['password'];
         
                     $q = "SELECT password FROM users WHERE username='".$username."'";
+                    echo "<p>query: $q</p>";
                     foreach ($db->query($q) as $row) {
-                        if (password_verify($password, $row['password'])) {
+                        echo "<p>Print row: " . print_r($row) . "</p>";
+                        if (isset($password) && $password == $row['password']) {
                             $_SESSION['loggedin'] = $username;
                         } else {
                             /*$_SESSION['error'] = "Invalid credentials";
@@ -60,7 +62,7 @@ $db = get_db();*/
                 exit;
             }*/
         echo "<p>" . print_r($_SERVER) . "</p>";
-        echo "<p>" . print_r($SESSION) . "</p>";
+        echo "<p>" . print_r($_SESSION) . "</p>";
         echo "<p>" . print_r($dbUrl) . "</p>";
         echo "<p>" . print_r($db) . "</p>";
         ?>
