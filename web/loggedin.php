@@ -35,11 +35,11 @@ $db = get_db();
                         $_SESSION['loggedin'] = $username;
                     }
                     // ACCESS DENIED!!!
-                    else {
+                    /*else {
                         $_SESSION['error'] = "Invalid credentials";
                         header("Location: login.php");
                         exit;
-                    }
+                    }*/
                 }
             }  
             catch (PDOException $ex) {
@@ -50,11 +50,11 @@ $db = get_db();
         
         // Display the welcome page to user who successfully logged in
         echo '<h3 class="welcome">Welcome '. $_SESSION['loggedin'] . '!</h3>';
-        /*if (!isset($_SESSION['loggedin'])) {
+        if (!isset($_SESSION['loggedin'])) {
             $_SESSION['error'] = "Invalid credentials";
             header("Location: login.php");
             exit;
-        }*/
+        }
         ?>
     </body>
 </html>
