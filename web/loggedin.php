@@ -25,6 +25,7 @@ $db = get_db();
                 $username = $_POST['username'];
                 $password = $_POST['password'];
         
+                $q = "SELECT password FROM users WHERE username='".$username."'";
                 foreach ($db->query($q) as $row) {
                     if (isset($password) && $password == $row['password']) {
                         $_SESSION['loggedin'] = $username;
