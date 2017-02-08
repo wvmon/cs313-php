@@ -1,7 +1,7 @@
 <?php
 
-require "dbConnect.php";
-$db = get_db();
+/*require "dbConnect.php";
+$db = get_db();*/
 
 ?>
 
@@ -54,11 +54,15 @@ $db = get_db();
                 }
         }
         echo '<h3 class="headerText2" style="float:right;">Welcome '. $_SESSION['loggedin'] . '!</h3>';
-            if (!isset($_SESSION['loggedin'])) {
+            /*if (!isset($_SESSION['loggedin'])) {
                 $_SESSION['error'] = "Invalid credentials";
                 header("Location: login.php");
                 exit;
-            }
+            }*/
+        echo "<p>" . print_r($_SERVER) . "</p>";
+        echo "<p>" . print_r($SESSION) . "</p>";
+        echo "<p>" . print_r($dbUrl) . "</p>";
+        echo "<p>" . print_r($db) . "</p>";
         ?>
     </body>
 </html>
