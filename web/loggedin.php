@@ -1,7 +1,7 @@
 <?php
 
-/*require "dbConnect.php";
-$db = get_db();*/
+require "dbConnect.php";
+$db = get_db();
 
 ?>
 
@@ -20,7 +20,7 @@ $db = get_db();*/
         <h1>Are you logged in?</h1>
         <?php
         session_start();
-        $dbUrl = getenv('DATABASE_URL');
+        /*$dbUrl = getenv('DATABASE_URL');
             if (empty($dbUrl)) {
                 $dbUrl = "postgres://postgres:password@localhost:5432/cs313db";
             }
@@ -29,10 +29,10 @@ $db = get_db();*/
             $dbPort = $dbopts["port"];
             $dbUser = $dbopts["user"];
             $dbPassword = $dbopts["pass"];
-            $dbName = ltrim($dbopts["path"],'/');
+            $dbName = ltrim($dbopts["path"],'/');*/
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             try {
-                    $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+                    //$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
                     $username = $_POST['username'];
                     $password = $_POST['password'];
         
