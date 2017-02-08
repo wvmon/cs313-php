@@ -19,9 +19,13 @@
                             <legend class="legend2">Signup</legend>
                             <div class="form_stuff">
                                 <input type="email" name="email" class="login" placeholder="Username"><br><br>
+                                
                                 <input type="password" name="password" class="login" placeholder="Password"><br><br>
+                                
                                 <input type="password" name="password" class="login" placeholder="Re-enter Password"><br><br>
+                                
                                 <input type="submit" name="submit" class="btn" value="Create"><br><br>
+                                
                                 <a href="login.php">Already have an account?</a>
                             </div>                            
                         </fieldset>                    
