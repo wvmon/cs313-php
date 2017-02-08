@@ -43,9 +43,9 @@ $db = get_db();*/
                         if (isset($password) && $password == $row['password']) {
                             $_SESSION['loggedin'] = $username;
                         } else {
-                            /*$_SESSION['error'] = "Invalid credentials";
+                            $_SESSION['error'] = "Invalid credentials";
                             header("Location: login.php");
-                            exit;*/
+                            exit;
                             echo "Your welcome $username and $password and " . print_r($row);
                         }
                     }
@@ -56,11 +56,11 @@ $db = get_db();*/
                 }
         }
         echo '<h3 class="headerText2" style="float:right;">Welcome '. $_SESSION['loggedin'] . '!</h3>';
-            /*if (!isset($_SESSION['loggedin'])) {
+            if (!isset($_SESSION['loggedin'])) {
                 $_SESSION['error'] = "Invalid credentials";
                 header("Location: login.php");
                 exit;
-            }*/
+            }
         echo "<p>" . print_r($_SERVER) . "</p>";
         echo "<p>" . print_r($_SESSION) . "</p>";
         echo "<p>" . print_r($dbUrl) . "</p>";

@@ -6,6 +6,20 @@ CREATE TABLE scriptures (
     content VARCHAR(1000) NOT NULL
 );
 
+CREATE TABLE topics(
+    id SERIAL PRIMARY KEY NOT NULL,
+    name VARCHAR(40) NOT NULL
+);
+
+CREATE TABLE scripture_topic (
+    scriptureId int NOT NULL REFERENCES scriptures(id),
+    topicId int NOT NULL REFERENCES topics(id)
+);
+
+INSERT INTO topics(name) VALUES ('Faith');
+INSERT INTO topics(name) VALUES ('Charity');
+INSERT INTO topics(name) VALUES ('Sacrifice');
+
 INSERT INTO scriptures(book, chapter, verse, content)
 VALUES ('John', 1, 5, 'The light shines in the darkness, and the darkness has not overcome it.');
 
