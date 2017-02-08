@@ -25,10 +25,17 @@ $db = get_db();
                 $password = $_POST['password'];
         
                 $q = "SELECT password FROM users WHERE username='".$username."'";
+                
+                // parse through all passwords in database
                 foreach ($db->query($q) as $row) {
+                    
+                    // validate the user's password
+                    // WELCOME USER!!!
                     if (isset($password) && $password == $row['password']) {
                         $_SESSION['loggedin'] = $username;
-                    } else {
+                    }
+                    // ACCESS DENIED!!!
+                    else {
                         $_SESSION['error'] = "Invalid credentials";
                         header("Location: login.php");
                         exit;
@@ -40,12 +47,14 @@ $db = get_db();
                 die();
             }
         }
+        
+        // Display the welcome page to user who successfully logged in
         echo '<h3 class="welcome">Welcome '. $_SESSION['loggedin'] . '!</h3>';
-        if (!isset($_SESSION['loggedin'])) {
+        /*if (!isset($_SESSION['loggedin'])) {
             $_SESSION['error'] = "Invalid credentials";
             header("Location: login.php");
             exit;
-        }
+        }*/
         ?>
     </body>
 </html>
