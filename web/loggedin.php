@@ -40,7 +40,7 @@ $db = get_db();
                 die();
             }
         }
-        echo '<h3 class="headerText2" style="float:right;">Welcome '. $_SESSION['loggedin'] . '!</h3>';
+        echo '<h3 class="welcome">Welcome '. $_SESSION['loggedin'] . '!</h3>';
         if (!isset($_SESSION['loggedin'])) {
             $_SESSION['error'] = "Invalid credentials";
             header("Location: login.php");
