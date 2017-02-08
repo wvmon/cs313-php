@@ -35,7 +35,6 @@ $db = get_db();
                     $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
                     $username = $_POST['username'];
                     $password = $_POST['password'];
-                    echo ""
         
                     $q = "SELECT password FROM users WHERE username='".$username."'";
                     foreach ($db->query($q) as $row) {
