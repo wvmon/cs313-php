@@ -35,14 +35,17 @@ $db = get_db();
                     $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
                     $username = $_POST['username'];
                     $password = $_POST['password'];
+                    echo ""
+        
                     $q = "SELECT password FROM users WHERE username='".$username."'";
                     foreach ($db->query($q) as $row) {
                         if (password_verify($password, $row['password'])) {
                             $_SESSION['loggedin'] = $username;
                         } else {
-                            $_SESSION['error'] = "Invalid credentials";
+                            /*$_SESSION['error'] = "Invalid credentials";
                             header("Location: login.php");
-                            exit;
+                            exit;*/
+                            echo "Your welcome $username and $password and " . print_r($row);
                         }
                     }
                 }
