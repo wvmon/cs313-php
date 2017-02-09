@@ -18,11 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        //$hash = password_hash($password, PASSWORD_DEFAULT);
         $query = "INSERT INTO users(username, password) VALUES('" . $username . "', '" . $password . "')";
 
-        //$statement = $db->prepare($query);
-        $db->exec($query);
+        $statement = $db->prepare($query);
+        $statement->execute();
     }
     catch(PDOException $ex) {
         print "<p>error: $ex->getMessage() </p>\n\n";
