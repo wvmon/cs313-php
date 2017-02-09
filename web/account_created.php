@@ -6,18 +6,21 @@
  * Time: 6:09 PM
  */
 
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
+
 require "dbConnect.php";
 $db = get_db();
 
-$username = $_POST['username'];
-$password = $_POST['password'];
 
 if ($_SERVER[REQUEST_METHOD] == 'POST') {
     try {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
         $hash = password_hash($password, PASSWORD_DEFAULT);
         $query = "INSERT INTO users(username, password) VALUES('" . $username . "', '" . $hash . "')";
-        $statement = $db->prepare($query);
-        $statement->execute();
+        //$statement = $db->prepare($query);
+        $db->exec($query);
     }
     catch(PDOException $ex) {
         print "<p>error: $ex->getMessage() </p>\n\n";
