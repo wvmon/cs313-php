@@ -9,12 +9,13 @@
 ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
+print_r("jhfgh");
 require "dbConnect.php";
 $db = get_db();
 
-
 if ($_SERVER[REQUEST_METHOD] == 'POST') {
     try {
+
         $username = $_POST['username'];
         $password = $_POST['password'];
         $hash = password_hash($password, PASSWORD_DEFAULT);
