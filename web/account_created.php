@@ -23,7 +23,7 @@ if ($_SERVER[REQUEST_METHOD] == 'POST') {
         $db->exec($query);
     }
     catch(PDOException $ex) {
-        print "<p>error: $ex->getMessage() </p>\n\n";
+        //print "<p>error: $ex->getMessage() </p>\n\n";
     }
 }
 
