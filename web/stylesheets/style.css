@@ -76,6 +76,12 @@ h3 {
     padding: 0;
 }
 
+.col-sm-3 {
+    text-transform: uppercase;
+    margin: 35px 15px;
+    padding: 0;
+}
+
 .foot {
     background-color: #DDE0CD;
     text-align: center;

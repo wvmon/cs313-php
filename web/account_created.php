@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $statement->bindValue(':username', $username);
         $statement->bindValue(':password', $password);
-        
+
         $statement->execute();
     }
     catch(PDOException $ex) {
