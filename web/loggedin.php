@@ -37,7 +37,7 @@ $db = get_db();
                     
                     // validate the user's password
                     // WELCOME USER!!!
-                    if (password_verify($password, $row['password'])) {
+                    if (isset($password) && $password == $row['password']) {
                         $_SESSION['loggedin'] = $username;
                     }
                 }
