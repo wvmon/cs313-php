@@ -19,21 +19,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        echo "Password: " . $password . " Username: " . $username;
         $hash = password_hash($password, PASSWORD_DEFAULT);
         $query = "INSERT INTO users(username, password) VALUES('" . $username . "', '" . $hash . "')";
 
-        echo "Print Query: " . $query;
         //$statement = $db->prepare($query);
         $db->exec($query);
     }
     catch(PDOException $ex) {
-        //print "<p>error: $ex->getMessage() </p>\n\n";
+        print "<p>error: $ex->getMessage() </p>\n\n";
     }
 }
 //
-//if (isset($_POST['new_user'])) {
-//    header("Location: login.php");
-//    exit;
-//}
+if (isset($_POST['new_user'])) {
+    header("Location: login.php");
+    exit;
+}
 ?>
