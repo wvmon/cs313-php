@@ -1,3 +1,12 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: William Montesdeoca
+ * Date: 2/8/2017
+ * Time: 6:09 PM
+ */
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,18 +23,18 @@
             <div class="row">
                 <div class="col-lg-4"></div>
                 <div class="col-lg-4">
-                    <form action="" method="POST">
+                    <form action="account_created.php" method="POST">
                         <fieldset>
                             <legend class="legend2">Signup</legend>
                             <div class="form_stuff">
-                                <input type="email" name="email" class="login" placeholder="Username"><br><br>
+                                <input type="text" name="username" class="login" placeholder="Username"><br><br>
                                 
                                 <input type="password" name="password" class="login" placeholder="Password"><br><br>
                                 
-                                <input type="password" name="password" class="login" placeholder="Re-enter Password"><br><br>
-                                
                                 <input type="submit" name="submit" class="btn" value="Create"><br><br>
-                                
+
+                                <input type="hidden" name="new_user" value="true">
+
                                 <a href="login.php">Already have an account?</a>
                             </div>                            
                         </fieldset>                    

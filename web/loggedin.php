@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: William Montesdeoca
+ * Date: 2/8/2017
+ * Time: 6:09 PM
+ */
 require "dbConnect.php";
 $db = get_db();
 ?>

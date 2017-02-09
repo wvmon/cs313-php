@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: William Montesdeoca
+ * Date: 2/8/2017
+ * Time: 6:09 PM
+ */
 session_start();
 if (isset($_SESSION['loggedin'])) {
     header("Location: loggedin.php");
