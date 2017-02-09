@@ -13,7 +13,7 @@ print_r("jhfgh");
 require "dbConnect.php";
 $db = get_db();
 
-if ($_SERVER[REQUEST_METHOD] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
 
         $username = $_POST['username'];
@@ -22,6 +22,8 @@ if ($_SERVER[REQUEST_METHOD] == 'POST') {
         echo "Password: " . $password . " Username: " . $username;
         $hash = password_hash($password, PASSWORD_DEFAULT);
         $query = "INSERT INTO users(username, password) VALUES('" . $username . "', '" . $hash . "')";
+
+        echo "Print Query: " . $query;
         //$statement = $db->prepare($query);
         $db->exec($query);
     }
