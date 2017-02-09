@@ -14,18 +14,20 @@ require "dbConnect.php";
 $db = get_db();
 
 if ($_SERVER[REQUEST_METHOD] == 'POST') {
-//    try {
-//
-//        $username = $_POST['username'];
-//        $password = $_POST['password'];
-//        $hash = password_hash($password, PASSWORD_DEFAULT);
-//        $query = "INSERT INTO users(username, password) VALUES('" . $username . "', '" . $hash . "')";
-//        //$statement = $db->prepare($query);
-//        $db->exec($query);
-//    }
-//    catch(PDOException $ex) {
-//        //print "<p>error: $ex->getMessage() </p>\n\n";
-//    }
+    try {
+
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        echo "Password: " . $password . " Username: " . $username;
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $query = "INSERT INTO users(username, password) VALUES('" . $username . "', '" . $hash . "')";
+        //$statement = $db->prepare($query);
+        $db->exec($query);
+    }
+    catch(PDOException $ex) {
+        //print "<p>error: $ex->getMessage() </p>\n\n";
+    }
 }
 //
 //if (isset($_POST['new_user'])) {
