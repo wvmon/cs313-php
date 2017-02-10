@@ -5,15 +5,6 @@
  * Date: 2/8/2017
  * Time: 6:09 PM
  */
-if (isset($_POST['login'])) {
-    if (empty($_POST['username'])) {
-        echo "Username is Required";
-    }
-    if (empty($_POST['password'])) {
-        echo "Password is Required";
-    }
-}
-
 session_start();
 if (isset($_SESSION['loggedin'])) {
     header("Location: loggedin.php");
@@ -33,6 +24,16 @@ if (isset($_SESSION['loggedin'])) {
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <?php
+        if (isset($_POST['login'])) {
+            if (empty($_POST['username'])) {
+                echo "Username is Required";
+            }
+            if (empty($_POST['password'])) {
+                echo "Password is Required";
+            }
+        }
+        ?>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4"></div>
