@@ -7,8 +7,16 @@
  */
 session_start();
 if (isset($_SESSION['loggedin'])) {
-    header("Location: loggedin.php");
-    exit;
+    if (empty($_POST['username'])) {
+        echo "Username is Required";
+    }
+    elseif (empty($_POST['password'])) {
+        echo "Password is Required";
+    }
+    else {
+        header("Location: loggedin.php");
+        exit;
+    }
 }
 ?>
 
