@@ -39,7 +39,7 @@ if (isset($_SESSION['loggedin'])) {
             <div class="row">
                 <div class="col-lg-4"></div>
                 <div class="col-lg-4">
-                    <form action="loggedin.php" method="POST">
+                    <form action="loggedin.php" id="form" method="POST">
                         <fieldset>
                             <legend class="legend">Login</legend>
                             <div class="form_stuff">
