@@ -5,18 +5,19 @@
  * Date: 2/8/2017
  * Time: 6:09 PM
  */
-session_start();
-if (isset($_SESSION['loggedin'])) {
+if (isset($_POST['login'])) {
     if (empty($_POST['username'])) {
         echo "Username is Required";
     }
-    elseif (empty($_POST['password'])) {
+    if (empty($_POST['password'])) {
         echo "Password is Required";
     }
-    else {
-        header("Location: loggedin.php");
-        exit;
-    }
+}
+
+session_start();
+if (isset($_SESSION['loggedin'])) {
+    header("Location: loggedin.php");
+    exit;
 }
 ?>
 
