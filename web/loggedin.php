@@ -27,7 +27,7 @@ $password = $_POST['password'];
     <body>
         <?php
         session_start();
-        if (!empty($_POST[$email]) && !empty($_POST[$password])) {
+        if ($_SERVER['REQUEST_METHOD'] == "POST") {
             try {
                 // match the password with the given username
                 $q = "SELECT password FROM users WHERE username='".$username."'";
@@ -46,8 +46,6 @@ $password = $_POST['password'];
                 print "<p>error: $ex->getMessage() </p>\n\n";
                 die();
             }
-        } else {
-            $_SESSION[$error] = "Required fields are empty.";
         }
         
         // Display the welcome page to user who successfully logged in
