@@ -24,7 +24,7 @@ if (isset($_SESSION['loggedin'])) {
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
             function check_empty() {
-                if (document.getElementById('username').value == "" || document.getElementById('password').value == "" ) {
+                if (document.getElementsByName('username').value == "" || document.getElementsByName('password').value == "" ) {
                     //alert("Please fill out all fields.");
                     document.getElementById("error").innerHTML= "Empty fields exist.";
                     return false;
