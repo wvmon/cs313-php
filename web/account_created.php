@@ -14,7 +14,6 @@ $db = get_db();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
-
         $username = $_POST['username'];
         $password = $_POST['password'];
 
@@ -30,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         print "<p>error: $ex->getMessage() </p>\n\n";
     }
 }
-//
 if (isset($_POST['new_user'])) {
     header("Location: login.php");
     exit;

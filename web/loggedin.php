@@ -7,6 +7,10 @@
  */
 require "dbConnect.php";
 $db = get_db();
+
+// variables initialized
+$username = $_POST['username'];
+$password = $_POST['password'];
 ?>
 
 <!DOCTYPE html>
@@ -25,9 +29,6 @@ $db = get_db();
         session_start();
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             try {
-                // variables initialized
-                $username = $_POST['username'];
-                $password = $_POST['password'];
 
                 // match the password with the given username
                 $q = "SELECT password FROM users WHERE username='".$username."'";
