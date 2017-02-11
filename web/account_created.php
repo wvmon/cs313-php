@@ -6,18 +6,14 @@
  * Time: 6:09 PM
  */
 
-ini_set('display_errors', 'On');
-error_reporting(E_ALL);
+$username = $_POST['username'];
+$password = $_POST['password'];
 
 require "dbConnect.php";
 $db = get_db();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
-
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-
         $query = "INSERT INTO users(username, password) VALUES(:username, :password)";
         $statement = $db->prepare($query);
 
@@ -31,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         die();
     }
 }
+
 //
 if (isset($_POST['new_user'])) {
     header("Location: login.php");
