@@ -7,13 +7,15 @@
  */
 session_start();
 if (isset($_SESSION['loggedin'])) {
-    header("Location: loggedin.php");
     //exit;
 
     $message = '';
 
     if (empty($_POST['username'] && empty($_POST['password']))) {
         $message = "Required fields are empty.";
+    } else {
+
+        header("Location: loggedin.php");
     }
 }
 ?>
