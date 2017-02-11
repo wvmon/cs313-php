@@ -27,6 +27,7 @@ if (isset($_SESSION['loggedin'])) {
                 if (document.getElementById()'username').value == "" || document.getElementById('password').value == "" ) {
                     //alert("Please fill out all fields.");
                     document.getElementById("error").textContent = "Empty fields exist.";
+                    return false;
                 } else {
                     document.getElementById('form').submit();
                 }
@@ -39,7 +40,7 @@ if (isset($_SESSION['loggedin'])) {
                 <div class="col-lg-4"></div>
                 <div class="col-lg-4">
                     <span id="error" class="errorspan"></span>
-                    <form onsubmit="check_empty()" action="loggedin.php" id="form" method="POST">
+                    <form onsubmit="return check_empty()" action="loggedin.php" id="form" method="POST">
                         <fieldset>
                             <legend class="legend">Login</legend>
                             <div class="form_stuff">
