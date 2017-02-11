@@ -52,7 +52,7 @@ $db = get_db();
         echo '<h3 class="welcome">Welcome '. $_SESSION['loggedin'] . '!</h3>';
         
         // ACCESS DENIED!!
-        if (!isset($_SESSION['loggedin'])) {
+        if (!isset($_SESSION['loggedin']) && empty($_SESSION['loggedin'])) {
             $_SESSION['error'] = "Invalid credentials";
             header("Location: login.php");
             exit;

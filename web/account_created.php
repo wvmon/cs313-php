@@ -28,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     catch(PDOException $ex) {
         print "<p>error: $ex->getMessage() </p>\n\n";
+        die();
     }
 }
 //
