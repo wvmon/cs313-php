@@ -27,7 +27,6 @@ if (isset($_SESSION['loggedin'])) {
                 if (document.getElementById()'username').value == "" || document.getElementById('password').value == "" ) {
                     //alert("Please fill out all fields.");
                     document.getElementById("error").textContent = "Empty fields exist.";
-                    return false;
                 } else {
                     document.getElementById('form').submit();
                 }
