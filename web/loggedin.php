@@ -7,6 +7,16 @@
  */
 require "dbConnect.php";
 $db = get_db();
+
+// variables initialized
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+if (empty($username) || empty($password)) {
+    $_SESSION['error'] = "All inputs are required.";
+    header("Location: login.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -25,10 +35,6 @@ $db = get_db();
         session_start();
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             try {
-                // variables initialized
-                $username = $_POST['username'];
-                $password = $_POST['password'];
-                
                 // match the password with the given username
                 $q = "SELECT password FROM users WHERE username='".$username."'";
                 
@@ -52,7 +58,7 @@ $db = get_db();
         echo '<h3 class="welcome">Welcome '. $_SESSION['loggedin'] . '!</h3>';
         
         // ACCESS DENIED!!
-        if (!isset($_SESSION['loggedin']) && empty($_SESSION['loggedin'])) {
+        if (!isset($_SESSION['loggedin'])) {
             $_SESSION['error'] = "Invalid credentials";
             header("Location: login.php");
             exit;
