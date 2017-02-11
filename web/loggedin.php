@@ -57,6 +57,11 @@ $password = $_POST['password'];
             header("Location: login.php");
             exit;
         }
+        elseif (empty($_POST[$username] && empty($_POST[$password]))) {
+            $_SESSION['error'] = "Required fields are empty";
+            header("Location: login.php");
+            exit;
+        }
         ?>
         <a href="logout.php">Logout</a>
     </body>

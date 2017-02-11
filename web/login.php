@@ -10,12 +10,6 @@ if (isset($_SESSION['loggedin'])) {
     header("Location: loggedin.php");
     //exit;
 }
-
-$message = '';
-
-if (empty($_POST['username'] && empty($_POST['password']))) {
-    $message = "Required fields are empty.";
-}
 ?>
 
 <!DOCTYPE html>
@@ -34,9 +28,6 @@ if (empty($_POST['username'] && empty($_POST['password']))) {
             <div class="row">
                 <div class="col-lg-4"></div>
                 <div class="col-lg-4">
-                    <?php if(!empty($message)): ?>
-                        <p><?= $message ?></p>
-                    <?php endif; ?>
                     <form action="loggedin.php" id="form" method="POST">
                         <fieldset>
                             <legend class="legend">Login</legend>
