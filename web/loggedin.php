@@ -43,7 +43,7 @@ if (empty($username) || empty($password)) {
                     
                     // validate the user's password
                     // WELCOME USER!!!
-                    if (isset($password) && $password == $row['password']) {
+                    if (password_verify($password, $row['password'])) {
                         $_SESSION['loggedin'] = $username;
                     }
                 }

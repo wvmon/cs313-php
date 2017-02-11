@@ -20,11 +20,13 @@ $db = get_db();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+
         $query = "INSERT INTO users(username, password) VALUES(:username, :password)";
         $statement = $db->prepare($query);
 
         $statement->bindValue(':username', $username);
-        $statement->bindValue(':password', $password);
+        $statement->bindValue(':password', $hash);
 
         $statement->execute();
     }
