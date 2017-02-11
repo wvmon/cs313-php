@@ -24,10 +24,9 @@ if (isset($_SESSION['loggedin'])) {
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
             function check_empty() {
-                if (document.getElementsByName('username').value == "" || document.getElementsByName('password').value == "" ) {
+                if (document.getElementById()'username').value == "" || document.getElementById('password').value == "" ) {
                     //alert("Please fill out all fields.");
-                    document.getElementById("error").innerHTML= "Empty fields exist.";
-                    return false;
+                    document.getElementById("error").innerHTML = "Empty fields exist.";
                 } else {
                     document.getElementById('form').submit();
                 }
@@ -44,9 +43,9 @@ if (isset($_SESSION['loggedin'])) {
                         <fieldset>
                             <legend class="legend">Login</legend>
                             <div class="form_stuff">
-                                <input type="text" name="username" class="login" placeholder="Username"><br><br>
+                                <input id="username" type="text" name="username" class="login" placeholder="Username"><br><br>
                                 
-                                <input type="password" name="password" class="login" placeholder="Password"><br><br>
+                                <input id="password" type="password" name="password" class="login" placeholder="Password"><br><br>
                                 
                                 <input type="submit" name="login" class="btn" value="Login"><br><br>
                                 
