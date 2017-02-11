@@ -11,7 +11,7 @@ if (isset($_SESSION['loggedin'])) {
 
     $message = '';
 
-    if (empty($_POST['username'] && empty($_POST['password']))) {
+    if (empty($_POST['username'] || empty($_POST['password']))) {
         $message = "Required fields are empty.";
     } else {
 
