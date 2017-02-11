@@ -53,10 +53,11 @@ $db = get_db();
         
         // ACCESS DENIED!!
         if (!isset($_SESSION['loggedin'])) {
-            $_SESSION['error'] = "Invalid credentials";
+            $_SESSION['error'] = "Invalid Username or Password";
             header("Location: login.php");
             exit;
         }
         ?>
+        <a href="logout.php">Logout</a>
     </body>
 </html>
