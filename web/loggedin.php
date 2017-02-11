@@ -12,11 +12,11 @@ $db = get_db();
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-if (empty($username) || empty($password)) {
-    $_SESSION['error'] = "All inputs are required.";
-    header("Location: login.php");
-    exit;
-}
+//if (empty($username) || empty($password)) {
+//    $_SESSION['error'] = "All inputs are required.";
+//    header("Location: login.php");
+//    exit;
+//}
 ?>
 
 <!DOCTYPE html>
