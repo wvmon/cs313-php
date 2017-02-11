@@ -39,6 +39,7 @@
                             </div>                            
                         </fieldset>                    
                     </form>
+                    <span class="errorspan"><?php echo $_SESSION['error']; ?></span>
                 </div>
                 <div class="col-lg-4"></div>
             </div>

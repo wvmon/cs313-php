@@ -9,6 +9,12 @@
 $username = $_POST['username'];
 $password = $_POST['password'];
 
+if (empty($username) || empty($passowrd)) {
+    header("Location: signup.php");
+    $_SESSION['error'] = "Invalid credentials";
+    exit;
+}
+
 require "dbConnect.php";
 $db = get_db();
 
