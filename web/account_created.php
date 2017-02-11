@@ -12,11 +12,12 @@ error_reporting(E_ALL);
 require "dbConnect.php";
 $db = get_db();
 
+// Variables initialized
+$username = $_POST['username'];
+$password = $_POST['password'];
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-
         $query = "INSERT INTO users(username, password) VALUES(:username, :password)";
         $statement = $db->prepare($query);
 
