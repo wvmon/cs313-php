@@ -7,16 +7,6 @@
  */
 require "dbConnect.php";
 $db = get_db();
-
-// variables initialized
-$username = $_POST['username'];
-$password = $_POST['password'];
-
-//if (empty($username) || empty($password)) {
-//    $_SESSION['error'] = "All inputs are required.";
-//    header("Location: login.php");
-//    exit;
-//}
 ?>
 
 <!DOCTYPE html>
@@ -35,6 +25,10 @@ $password = $_POST['password'];
         session_start();
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             try {
+                // variables initialized
+                $username = $_POST['username'];
+                $password = $_POST['password'];
+
                 // match the password with the given username
                 $q = "SELECT password FROM users WHERE username='".$username."'";
                 
@@ -43,7 +37,7 @@ $password = $_POST['password'];
                     
                     // validate the user's password
                     // WELCOME USER!!!
-                    if (password_verify($password, $row['password'])) {
+                    if (isset($password) && $password == $row['password']) {
                         $_SESSION['loggedin'] = $username;
                     }
                 }
