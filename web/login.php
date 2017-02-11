@@ -5,16 +5,17 @@
  * Date: 2/8/2017
  * Time: 6:09 PM
  */
-session_start();
-if (isset($_SESSION['loggedin'])) {
-    header("Location: loggedin.php");
-    //exit;
-}
 
 $message = '';
 
 if (empty($_POST['username'] || empty($_POST['password']))) {
     $message = "Required fields are empty.";
+}
+
+session_start();
+if (isset($_SESSION['loggedin'])) {
+    header("Location: loggedin.php");
+    //exit;
 }
 ?>
 
