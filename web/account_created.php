@@ -23,8 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $query = "INSERT INTO users(username, password) VALUES(:username, :password)";
             $statement = $db->prepare($query);
 
-            $statement->bindValue(':username', $username);
-            $statement->bindValue(':password', $password);
+            $statement->bindParam(':username', $username);
+            $statement->bindParam(':password', $password);
 
             $statement->execute();
         } else {
