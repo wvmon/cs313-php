@@ -43,10 +43,7 @@ if (isset($_SESSION['loggedin'])) {
                             </div>                                
                         </fieldset>                    
                     </form>
-                    <?php if(!empty($_SESSION['error'])): ?>
-                        <span><?= $message ?></span>
-                    <?php endif; ?>
-                    <!--<span class="errorspan"><?php /*echo $_SESSION['error']; */?></span>-->
+                    <span class="errorspan"><?php echo $_SESSION['error']; ?></span>
                 </div>
                 <div class="col-lg-4"></div>
             </div>                   
