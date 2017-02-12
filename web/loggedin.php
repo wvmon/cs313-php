@@ -56,11 +56,11 @@ $password = $_POST['password'];
         echo '<h3 class="welcome">Welcome '. $_SESSION['loggedin'] . '!</h3>';
         
         // ACCESS DENIED!!
-        /*if (empty($_SESSION['loggedin'])) {
+        if (empty($_SESSION['loggedin'])) {
             $_SESSION['error'] = "Invalid Username or Password";
             header("Location: login.php");
             exit;
-        }*/
+        }
         ?>
         <a href="logout.php">Logout</a>
     </body>
