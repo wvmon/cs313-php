@@ -37,13 +37,13 @@ $password = $_POST['password'];
                     
                     // validate the user's password
                     // WELCOME USER!!!
-                    if (isset($password) && $password == $row['password']) {
+                    if (isset($password) && $password == $row['password']):
                         $_SESSION['loggedin'] = $username;
-                    } else {
+                    else:
                         $_SESSION['error'] = "Invalid Username or Password";
                         header("Location: login.php");
                         exit;
-                    }
+                    endif;
                 }
             }
             catch (PDOException $ex) {
@@ -56,11 +56,11 @@ $password = $_POST['password'];
         echo '<h3 class="welcome">Welcome '. $_SESSION['loggedin'] . '!</h3>';
         
         // ACCESS DENIED!!
-        if (empty($_SESSION['loggedin'])) {
-            $_SESSION['error'] = "Required fields are empty";
+        /*if (empty($_SESSION['loggedin'])) {
+            $_SESSION['error'] = "Invalid Username or Password";
             header("Location: login.php");
             exit;
-        }
+        }*/
         ?>
         <a href="logout.php">Logout</a>
     </body>
