@@ -41,6 +41,7 @@ if (isset($_SESSION['loggedin'])) {
                 <div class="col-lg-4"></div>
                 <div class="col-lg-4">
                     <form onsubmit="check_empty()" action="loggedin.php" id="form" method="POST">
+                        <span id="error" class="errorspan"></span>
                         <fieldset>
                             <legend class="legend">Login</legend>
                             <div class="form_stuff">
@@ -54,7 +55,7 @@ if (isset($_SESSION['loggedin'])) {
                             </div>                                
                         </fieldset>                    
                     </form>
-                    <span id="error" class="errorspan"><?php echo $_SESSION['error']; ?></span>
+                    <span class="errorspan"><?php echo $_SESSION['error']; ?></span>
                 </div>
                 <div class="col-lg-4"></div>
             </div>                   
