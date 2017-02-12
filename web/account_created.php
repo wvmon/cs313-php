@@ -19,23 +19,23 @@ $password = $_POST['password'];
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
-        $query = "INSERT INTO users(username, password) VALUES(:username, :password)";
-        $statement = $db->prepare($query);
+        if (!empty($username) && !empty($password)) {
+            $query = "INSERT INTO users(username, password) VALUES(:username, :password)";
+            $statement = $db->prepare($query);
 
-        $statement->bindValue(':username', $username);
-        $statement->bindValue(':password', $password);
+            $statement->bindValue(':username', $username);
+            $statement->bindValue(':password', $password);
 
-        $statement->execute();
+            $statement->execute();
+        } else {
+            $_SESSION['error'] = "Required fields are empty";
+            header("Location: signup.php");
+            exit;
+        }
     }
     catch(PDOException $ex) {
         print "<p>error: $ex->getMessage() </p>\n\n";
     }
-}
-// ACCESS DENIED!!
-if (!isset($_SESSION['registered'])) {
-    $_SESSION['error'] = "Required fields are empty";
-    header("Location: signup.php");
-    exit;
 }
 if (isset($_POST['new_user'])) {
     header("Location: login.php");
