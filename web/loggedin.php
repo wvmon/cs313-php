@@ -57,7 +57,7 @@ $password = $_POST['password'];
         
         // ACCESS DENIED!!
         if (empty($_SESSION['loggedin'])) {
-            $_SESSION['error'] = "Invalid Username or Password";
+            $_SESSION['error'] = "Required fields are empty";
             header("Location: login.php");
             exit;
         }
