@@ -47,7 +47,7 @@ $password = $_POST['password'];
                     $q->execute();
                     $results = $q->fetch(PDO::FETCH_ASSOC);
 
-                    if (count($results) > 0 && isset($q)) {
+                    if (count($results) > 0 && $password == $q) {
                         $_SESSION['loggedin'] = $username;
                     }
                 } else {
