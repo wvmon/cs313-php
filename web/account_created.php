@@ -16,6 +16,7 @@ $db = get_db();
 $username = $_POST['username'];
 $password = $_POST['password'];
 
+session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         $query = "INSERT INTO users(username, password) VALUES(:username, :password)";
@@ -29,6 +30,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     catch(PDOException $ex) {
         print "<p>error: $ex->getMessage() </p>\n\n";
     }
+}
+// ACCESS DENIED!!
+if (!isset($_SESSION['registered'])) {
+    $_SESSION['error'] = "Required fields are empty";
+    header("Location: signup.php");
+    exit;
 }
 if (isset($_POST['new_user'])) {
     header("Location: login.php");
