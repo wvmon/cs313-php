@@ -5,11 +5,6 @@
  * Date: 2/8/2017
  * Time: 6:09 PM
  */
-session_start();
-if (isset($_SESSION['registered'])) {
-    header("Location: account_created.php");
-    exit;
-}
 ?>
 
 <!DOCTYPE html>

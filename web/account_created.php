@@ -16,7 +16,6 @@ $db = get_db();
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         if (!empty($username) && !empty($password)) {
