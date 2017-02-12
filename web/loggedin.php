@@ -43,7 +43,7 @@ $password = $_POST['password'];
                         }
                     }*/
                     $q = $db->prepare('SELECT password FROM users WHERE username = :username');
-                    $q->bindParam(':username', $username);
+                    $q->bindValue(':username', $username);
                     $q->execute();
                     $results = $q->fetch(PDO::FETCH_ASSOC);
 

@@ -24,8 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $query = "INSERT INTO users(username, password) VALUES(:username, :password)";
             $statement = $db->prepare($query);
 
-            $statement->bindParam(':username', $username);
-            $statement->bindParam(':password', $hash);
+            $statement->bindValue(':username', $username);
+            $statement->bindValue(':password', $hash);
 
             $statement->execute();
         } else {
