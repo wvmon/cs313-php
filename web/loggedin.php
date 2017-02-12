@@ -39,6 +39,10 @@ $password = $_POST['password'];
                     // WELCOME USER!!!
                     if (isset($password) && $password == $row['password']) {
                         $_SESSION['loggedin'] = $username;
+                    } else {
+                        $_SESSION['error'] = "Invalid Username or Password";
+                        header("Location: login.php");
+                        exit;
                     }
                 }
             }
@@ -52,13 +56,8 @@ $password = $_POST['password'];
         echo '<h3 class="welcome">Welcome '. $_SESSION['loggedin'] . '!</h3>';
         
         // ACCESS DENIED!!
-        if (!isset($_SESSION['loggedin'])) {
+        if (empty($_SESSION['loggedin'])) {
             $_SESSION['error'] = "Invalid Username or Password";
-            header("Location: login.php");
-            exit;
-        }
-        elseif (empty($_SESSION['loggedin'])) {
-            $_SESSION['error'] = "Required fields are empty";
             header("Location: login.php");
             exit;
         }
