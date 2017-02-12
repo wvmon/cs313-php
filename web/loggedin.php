@@ -30,7 +30,7 @@ $password = $_POST['password'];
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             try {
                 if (!empty($username) && !empty($password)) {
-                    // match the password with the given username
+                    /*// match the password with the given username
                     $q = "SELECT password FROM users WHERE username='".$username."'";
 
                     // parse through all passwords in database
@@ -41,6 +41,14 @@ $password = $_POST['password'];
                         if (isset($password) && $password == $row['password']){
                             $_SESSION['loggedin'] = $username;
                         }
+                    }*/
+                    $q = $db->prepare('SELECT password FROM users WHERE username = :username');
+                    $q->bindParam(':username', $username);
+                    $q->execute();
+                    $results = $q->fetch(PDO::FETCH_ASSOC);
+
+                    if (count($results) > 0 && isset($password)) {
+                        $_SESSION['loggedin'] = $username;
                     }
                 } else {
                     $_SESSION['error'] = "Username and Password are Required";
