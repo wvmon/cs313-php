@@ -29,18 +29,25 @@ $password = $_POST['password'];
         session_start();
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             try {
-                // match the password with the given username
-                $q = "SELECT password FROM users WHERE username='".$username."'";
-                
-                // parse through all passwords in database
-                foreach ($db->query($q) as $row) {
-                    
-                    // validate the user's password
-                    // WELCOME USER!!!
-                    if (isset($password) && $password == $row['password']){
-                        $_SESSION['loggedin'] = $username;
+                if (!empty($username) && !empty($password)) {
+                    // match the password with the given username
+                    $q = "SELECT password FROM users WHERE username='".$username."'";
+
+                    // parse through all passwords in database
+                    foreach ($db->query($q) as $row) {
+
+                        // validate the user's password
+                        // WELCOME USER!!!
+                        if (isset($password) && $password == $row['password']){
+                            $_SESSION['loggedin'] = $username;
+                        }
                     }
+                } else {
+                    $_SESSION['error'] = "Username and Password are Required";
+                    header("Location: login.php");
+                    exit;
                 }
+
             }
             catch (PDOException $ex) {
                 print "<p>error: $ex->getMessage() </p>\n\n";
