@@ -27,7 +27,7 @@ $password = $_POST['password'];
     <body>
         <?php
         session_start();
-        $msg = '';
+        $_SESSION['error'] = '';
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             try {
                 if (!empty($username) && !empty($password)) {
@@ -52,8 +52,7 @@ $password = $_POST['password'];
                         $_SESSION['loggedin'] = $username;
                     }
                 } else {
-                    $msg = "Username and Password are Required";
-                    //$_SESSION['error'] = "Username and Password are Required";
+                    $_SESSION['error'] = "Username and Password are Required";
                     header("Location: login.php");
                     exit;
                 }
@@ -70,8 +69,7 @@ $password = $_POST['password'];
         
         // ACCESS DENIED!!
         if (!isset($_SESSION['loggedin'])) {
-            $msg = "Invalid Username or Password";
-            //$_SESSION['error'] = "Invalid Username or Password";
+            $_SESSION['error'] = "Invalid Username or Password";
             header("Location: login.php");
             exit;
         }

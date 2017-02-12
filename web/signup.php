@@ -28,9 +28,6 @@ if (isset($_SESSION['registered'])) {
             <div class="row">
                 <div class="col-lg-4"></div>
                 <div class="col-lg-4">
-                    <?php if (!empty($msg)): ?>
-                        <p><?= $msg ?></p>
-                    <?php endif; ?>
                     <form action="account_created.php" method="POST">
                         <fieldset>
                             <legend class="legend2">Signup</legend>
@@ -47,7 +44,7 @@ if (isset($_SESSION['registered'])) {
                             </div>                            
                         </fieldset>                    
                     </form>
-                    <!--<span class="errorspan"><?php /*echo $_SESSION['error']; */?></span>-->
+                    <span class="errorspan"><?php echo $_SESSION['error']; ?></span>
                 </div>
                 <div class="col-lg-4"></div>
             </div>

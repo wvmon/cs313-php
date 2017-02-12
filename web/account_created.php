@@ -17,7 +17,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 session_start();
-$msg = '';
+$_SESSION['error'] = '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         if (!empty($username) && !empty($password)) {
@@ -30,8 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $statement->execute();
         } else {
-            $msg = "Required Field(s) are Empty";
-            //$_SESSION['error'] = "Required fields are empty";
+            $_SESSION['error'] = "Required Field(s) are Empty";
             header("Location: signup.php");
             exit;
         }

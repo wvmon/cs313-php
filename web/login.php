@@ -29,9 +29,6 @@ if (isset($_SESSION['loggedin'])) {
             <div class="row">
                 <div class="col-lg-4"></div>
                 <div class="col-lg-4">
-                    <?php if (!empty($msg)): ?>
-                        <p><?= $msg ?></p>
-                    <?php endif; ?>
                     <form action="loggedin.php" id="form" method="POST">
                         <fieldset>
                             <legend class="legend">Login</legend>
@@ -46,6 +43,9 @@ if (isset($_SESSION['loggedin'])) {
                             </div>                                
                         </fieldset>                    
                     </form>
+                    <?php if(!empty($_SESSION['error'])): ?>
+                        <span><?= $message ?></span>
+                    <?php endif; ?>
                     <!--<span class="errorspan"><?php /*echo $_SESSION['error']; */?></span>-->
                 </div>
                 <div class="col-lg-4"></div>
