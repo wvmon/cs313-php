@@ -57,7 +57,7 @@ $password = $_POST['password'];
                         $_SESSION['loggedin'] = $username;
                     }
                 } else {
-                    $_SESSION['error'] = "Username and Password are Required";
+                    $_SESSION['error'] = $msg[0];
                     header("Location: login.php");
                     exit;
                 }
@@ -74,7 +74,7 @@ $password = $_POST['password'];
 
         // ACCESS DENIED!!
         if (!isset($_SESSION['loggedin'])) {
-            $_SESSION['error'] = $msg[0];
+            $_SESSION['error'] = $msg[1];
             header("Location: login.php");
             exit;
         }
