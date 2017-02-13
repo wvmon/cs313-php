@@ -27,7 +27,6 @@ $password = $_POST['password'];
     <body>
         <?php
         session_start();
-        $_SESSION['error'] = '';
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             try {
                 if (!empty($username) && !empty($password)) {
@@ -66,10 +65,11 @@ $password = $_POST['password'];
         
         // Display the welcome page to user who successfully logged in
         echo '<h3 class="welcome">Welcome '. $_SESSION['loggedin'] . '!</h3>';
-        
+        $msg = 'Invalid Username or Password';
+
         // ACCESS DENIED!!
         if (!isset($_SESSION['loggedin'])) {
-            $_SESSION['error'] = "Invalid Username or Password";
+            $_SESSION['error'] = $msg;
             header("Location: login.php");
             exit;
         }

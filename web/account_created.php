@@ -17,7 +17,6 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 session_start();
-$_SESSION['error'] = '';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         if (!empty($username) && !empty($password)) {
