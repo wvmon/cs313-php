@@ -28,10 +28,12 @@ $password = $_POST['password'];
         <?php
         session_start();
 
-        $msg = [
+        $msg_array = [
             'Username and Password are Required',
             'Invalid Username or Password'
         ];
+
+        $msg = print_r('<div class="modal fade" id="myModal" role="dialog"><div class="modal-dialog modal-sm"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">Modal Header</h4></div><div class="modal-body"><p>This is a small modal.</p></div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>');
 
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             try {
@@ -57,7 +59,7 @@ $password = $_POST['password'];
                         $_SESSION['loggedin'] = $username;
                     }
                 } else {
-                    $_SESSION['error'] = $msg[0];
+                    $_SESSION['error'] = $msg_array[0];
                     header("Location: login.php");
                     exit;
                 }
@@ -74,7 +76,7 @@ $password = $_POST['password'];
 
         // ACCESS DENIED!!
         if (!isset($_SESSION['loggedin'])) {
-            $_SESSION['error'] = $msg[1];
+            $_SESSION['error'] = $msg;
             header("Location: login.php");
             exit;
         }
