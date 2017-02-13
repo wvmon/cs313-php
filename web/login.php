@@ -43,7 +43,18 @@ if (isset($_SESSION['loggedin'])) {
                             </div>                                
                         </fieldset>                    
                     </form>
-                    <span class="errorspan"><?php echo $_SESSION['error']; ?></span>
+                    <span class="errorspan">
+                        <div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                  <h4 class="modal-title"><?php echo $_SESSION['error']; ?></h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </span>
                 </div>
                 <div class="col-lg-4"></div>
             </div>                   
