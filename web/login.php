@@ -43,7 +43,7 @@ if (isset($_SESSION['loggedin'])) {
                             </div>                                
                         </fieldset>                    
                     </form>
-                    <span class="errorspan"><?php echo $_SESSION['error'] . '         <span>&times;</span>'; ?></span>
+                    <span class="errorspan"><?php echo $_SESSION['error']; ?></span>
                 </div>
                 <div class="col-lg-4"></div>
             </div>                   
