@@ -23,11 +23,13 @@ if (isset($_SESSION['registered'])) {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
-            function check_length() {
-                var get = document.getElementById('password').value;
-                console.log(get);
-                if (get.length < 7) {
-                    document.getElementById('error_msg').innerHTML = "Password must be 7+ characters";
+            function validPassword(password) {
+                var valPassword = /^[A-Za-z0-9]+$/;
+                if (password.match(valPassword) || password.length >= 7) {
+                    document.getElementById('error_msg').innerText = " ";
+                }
+                else {
+                    document.getElementById('error_msg').innerText = "Password needs to be 7+ characters long.";
                 }
             }
         </script>
@@ -43,8 +45,10 @@ if (isset($_SESSION['registered'])) {
                             <div class="form_stuff">
                                 <input type="text" name="username" class="login" placeholder="Username"><br><br>
                                 
-                                <input id="password" type="password" name="password" class="login" placeholder="Password" onkeyup="check_length()">
-                                <span id="error_msg"></span><br><br>
+                                <input id="password" type="password" name="password" class="login" placeholder="Password"
+                                       onchange="validPassword(document.getElementById('password').value)"><br>
+
+                                <span id="error_msg">Password must be 7+ characters</span><br><br>
 
                                 <input type="password" name="password2" class="login" placeholder="Confirm Password"><br><br>
                                 
