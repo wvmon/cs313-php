@@ -34,9 +34,9 @@ if (isset($_SESSION['registered'])) {
                             <div class="form_stuff">
                                 <input type="text" name="username" class="login" placeholder="Username"><br><br>
                                 
-                                <input type="password" name="password" class="login" placeholder="Password"><br><br>
+                                <input type="password" name="password" class="login" placeholder="Password" minlength="7"><br><br>
 
-                                <input type="password" name="password2" class="login" placeholder="Confirm Password"><br><br>
+                                <input type="password" name="password2" class="login" placeholder="Confirm Password" minlength="7"><br><br>
                                 
                                 <input type="submit" name="submit" class="btn" value="Create"><br><br>
 
