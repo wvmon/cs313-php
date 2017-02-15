@@ -48,7 +48,7 @@ if (isset($_SESSION['registered'])) {
                                 <input id="password" type="password" name="password" class="login" placeholder="Password"
                                        onchange="validPassword(document.getElementById('password').value)"><br>
 
-                                <span id="error_msg">Password must be 7+ characters</span><br><br>
+                                <p id="error_msg">Password must be 7+ characters</p><br><br>
 
                                 <input type="password" name="password2" class="login" placeholder="Confirm Password"><br><br>
                                 
