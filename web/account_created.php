@@ -20,7 +20,19 @@ session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         if (!empty($username) && !empty($password)) {
+
+            $username_check = $db->prepare('SELECT username FROM users WHERE username = :username');
+            $username_check->bindValue(':username', $username);
+            $username_check->execute();
+            $fetch = $username_check->fetch(PDO::FETCH_ASSOC);
+
+            if ($username == $fetch['username']) {
+                $_SESSION['error'] = "Username already exists.";
+                header("Location: signup.php");
+                exit;
+            }
             $hash = password_hash($password, PASSWORD_DEFAULT);
+
             $query = "INSERT INTO users(username, password) VALUES(:username, :password)";
             $statement = $db->prepare($query);
 
@@ -28,6 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $statement->bindValue(':password', $hash);
 
             $statement->execute();
+
         } else {
             $_SESSION['error'] = "Required Field(s) are Empty";
             header("Location: signup.php");

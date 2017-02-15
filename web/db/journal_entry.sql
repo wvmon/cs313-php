@@ -4,8 +4,8 @@ DROP TABLE users;
 
 CREATE TABLE users(
     id SERIAL PRIMARY KEY NOT NULL,
-    username VARCHAR(40) NOT NULL,
-    password VARCHAR(40) NOT NULL
+    username VARCHAR(40) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE journal(
