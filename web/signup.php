@@ -47,7 +47,7 @@ if (isset($_SESSION['registered'])) {
                                 <input id="password" type="password" name="password" class="login" placeholder="Password"
                                        onchange="validPassword(document.getElementById('password').value)"><br>
 
-                                <p id="error_msg"></p><br>
+                                <span id="error_msg"></span><br>
 
                                 <input type="password" name="password2" class="login" placeholder="Confirm Password"><br><br>
                                 
