@@ -24,7 +24,7 @@ if (isset($_SESSION['registered'])) {
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
             function validPassword(password) {
-                if (password.length < 7) {
+                if (password.length >= 7) {
                     document.getElementById('error_msg').innerText = "";
                 }
                 else {
@@ -47,7 +47,7 @@ if (isset($_SESSION['registered'])) {
                                 <input id="password" type="password" name="password" class="login" placeholder="Password"
                                        onchange="validPassword(document.getElementById('password').value)"><br>
 
-                                <p id="error_msg">Password must be 7+ characters</p><br>
+                                <p id="error_msg"></p><br>
 
                                 <input type="password" name="password2" class="login" placeholder="Confirm Password"><br><br>
                                 
