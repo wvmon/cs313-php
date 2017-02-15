@@ -20,16 +20,19 @@ $password2 = $_POST['password2'];
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
+
+        $match = preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$#", $password);
+
         if (!empty($username) && !empty($password) && !empty($password2)) {
-            if ($password == $password2) {
-                if (strlen($password) >= 7) {
+            if ($match) {
+                if ($password == $password2) {
                     $username_check = $db->prepare('SELECT username FROM users WHERE username = :username');
                     $username_check->bindValue(':username', $username);
                     $username_check->execute();
                     $fetch = $username_check->fetch(PDO::FETCH_ASSOC);
 
                     if ($username == $fetch['username']) {
-                        $_SESSION['error'] = "Username already exists.";
+                        $_SESSION['error'] = "Username Already Exists.";
                         header("Location: signup.php");
                         exit;
                     }
@@ -44,12 +47,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     $statement->execute();
                 } else {
-                    $_SESSION['error'] = "Password must be 7 or more characters long.";
+                    $_SESSION['error'] = "Passwords Do Not Match.";
                     header("Location: signup.php");
                     exit;
                 }
             } else {
-                $_SESSION['error'] = "Passwords do not match.";
+                $_SESSION['error'] = "Password Must Contain Numbers, letters, CAPS.";
                 header("Location: signup.php");
                 exit;
             }

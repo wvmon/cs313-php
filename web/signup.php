@@ -24,13 +24,13 @@ if (isset($_SESSION['registered'])) {
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
             function validPassword(password) {
-                var valPassword = ^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$;
+                var valPassword = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,20})");
                 if (password.match(valPassword)) {
                     document.getElementById('error_msg').innerText = "";
                 }
                 else {
-                    document.getElementById('error_msg').innerText = "Password must contain 8-16 characters and at least " +
-                        "one number, one letter and one unique character such as.";
+                    document.getElementById('error_msg').innerText = "Password Muse be 8-20 Characters long and contain " +
+                        "Numbers, letters, CAPS.";
                 }
             }
         </script>
