@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     exit;
                 }
             } else {
-                $_SESSION['error'] = "Password Must Contain Numbers, letters, CAPS.";
+                $_SESSION['error'] = "Password Must be 8-20 Characters long and contain Contain Numbers, letters, CAPS.";
                 header("Location: signup.php");
                 exit;
             }
