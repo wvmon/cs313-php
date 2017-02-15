@@ -21,18 +21,25 @@ session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
 
-        $match = preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$#", $password);
+        $password_match = preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$#", $password);
+        $username_match = preg_match('/^[A-Za-z][A-Za-z0-9]$/', $username);
 
         if (!empty($username) && !empty($password) && !empty($password2)) {
-            if ($match) {
+            if ($password_match) {
                 if ($password == $password2) {
                     $username_check = $db->prepare('SELECT username FROM users WHERE username = :username');
                     $username_check->bindValue(':username', $username);
                     $username_check->execute();
                     $fetch = $username_check->fetch(PDO::FETCH_ASSOC);
 
-                    if ($username == $fetch['username']) {
-                        $_SESSION['error'] = "Username Already Exists.";
+                    if ($username_match) {
+                        if ($username == $fetch['username']) {
+                            $_SESSION['error'] = "Username Already Exists.";
+                            header("Location: signup.php");
+                            exit;
+                        }
+                    } else {
+                        $_SESSION['error'] = "Username Must Start With Letter.";
                         header("Location: signup.php");
                         exit;
                     }

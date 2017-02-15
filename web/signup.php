@@ -23,13 +23,23 @@ if (isset($_SESSION['registered'])) {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
-            function validPassword(password) {
-                var valPassword = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,20})");
-                if (password.match(valPassword)) {
+            function validUsername(username) {
+                var valUsername = /^[A-Za-z][a-zA-Z0-9]+$/;
+                if (username.match(valUsername)) {
                     document.getElementById('error_msg').innerText = "";
                 }
                 else {
-                    document.getElementById('error_msg').innerText = "Password Muse be 8-20 Characters long and contain " +
+                    document.getElementById('error_msg').innerText = "Username Must Start With Letter";
+                }
+            }
+
+            function validPassword(password) {
+                var valPassword = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{8,20})");
+                if (password.match(valPassword)) {
+                    document.getElementById('error_msg2').innerText = "";
+                }
+                else {
+                    document.getElementById('error_msg2').innerText = "Password Muse be 8-20 Characters long and contain " +
                         "Numbers, letters, CAPS.";
                 }
             }
@@ -44,12 +54,15 @@ if (isset($_SESSION['registered'])) {
                         <fieldset>
                             <legend class="legend2">Signup</legend>
                             <div class="form_stuff">
-                                <input type="text" name="username" class="login" placeholder="Username"><br><br>
+                                <input id="username" type="text" name="username" class="login" placeholder="Username"
+                                       onchange="validUsername(document.getElementById('username').value)"><br>
+
+                                <span id="error_msg"></span><br>
                                 
                                 <input id="password" type="password" name="password" class="login" placeholder="Password"
                                        onchange="validPassword(document.getElementById('password').value)"><br>
 
-                                <span id="error_msg"></span><br>
+                                <span id="error_msg2"></span><br>
 
                                 <input type="password" name="password2" class="login" placeholder="Confirm Password"><br><br>
                                 
