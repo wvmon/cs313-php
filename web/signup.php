@@ -24,7 +24,7 @@ if (isset($_SESSION['registered'])) {
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
             function validPassword(password) {
-                var valPassword = ^.*(?=.{8,16})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$;
+                var valPassword = ^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$;
                 if (password.match(valPassword)) {
                     document.getElementById('error_msg').innerText = "";
                 }
