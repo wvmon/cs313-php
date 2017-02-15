@@ -26,7 +26,7 @@ if (isset($_SESSION['registered'])) {
             function check_length() {
                 var get = document.getElementById('password').value;
                 console.log(get);
-                if (get.length() < 7) {
+                if (get.length < 7) {
                     document.getElementById('error_msg').innerHTML = "Password must be 7+ characters";
                 }
             }
