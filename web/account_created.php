@@ -22,26 +22,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         if (!empty($username) && !empty($password) && !empty($password2)) {
             if ($password == $password2) {
-                $username_check = $db->prepare('SELECT username FROM users WHERE username = :username');
-                $username_check->bindValue(':username', $username);
-                $username_check->execute();
-                $fetch = $username_check->fetch(PDO::FETCH_ASSOC);
+                if (strlen($password) >= 7) {
+                    $username_check = $db->prepare('SELECT username FROM users WHERE username = :username');
+                    $username_check->bindValue(':username', $username);
+                    $username_check->execute();
+                    $fetch = $username_check->fetch(PDO::FETCH_ASSOC);
 
-                if ($username == $fetch['username']) {
-                    $_SESSION['error'] = "Username already exists.";
+                    if ($username == $fetch['username']) {
+                        $_SESSION['error'] = "Username already exists.";
+                        header("Location: signup.php");
+                        exit;
+                    }
+
+                    $hash = password_hash($password, PASSWORD_DEFAULT);
+
+                    $query = "INSERT INTO users(username, password) VALUES(:username, :password)";
+                    $statement = $db->prepare($query);
+
+                    $statement->bindValue(':username', $username);
+                    $statement->bindValue(':password', $hash);
+
+                    $statement->execute();
+                } else {
+                    $_SESSION['error'] = "Password must be 7 or more characters long.";
                     header("Location: signup.php");
                     exit;
                 }
-
-                $hash = password_hash($password, PASSWORD_DEFAULT);
-
-                $query = "INSERT INTO users(username, password) VALUES(:username, :password)";
-                $statement = $db->prepare($query);
-
-                $statement->bindValue(':username', $username);
-                $statement->bindValue(':password', $hash);
-
-                $statement->execute();
             } else {
                 $_SESSION['error'] = "Passwords do not match.";
                 header("Location: signup.php");
