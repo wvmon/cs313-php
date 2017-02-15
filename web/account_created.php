@@ -20,12 +20,12 @@ session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         if (!empty($username) && !empty($password)) {
-            //$hash = password_hash($password, PASSWORD_BCRYPT);
+            $hash = password_hash($password, PASSWORD_BCRYPT);
             $query = "INSERT INTO users(username, password) VALUES(:username, :password)";
             $statement = $db->prepare($query);
 
             $statement->bindValue(':username', $username);
-            $statement->bindValue(':password', $password);
+            $statement->bindValue(':password', $hash);
 
             $statement->execute();
         } else {
