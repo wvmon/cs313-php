@@ -15,7 +15,7 @@ $db = get_db();
 // Variables initialized
 $username = $_POST['username'];
 $password = $_POST['password'];
-$password2 = $POST['password2'];
+$password2 = $_POST['password2'];
 
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
