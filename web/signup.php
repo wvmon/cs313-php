@@ -22,6 +22,14 @@ if (isset($_SESSION['registered'])) {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            function check_length() {
+                var get = document.getElementById('password').value;
+                if (get.length() < 7) {
+                    document.getElementById('error_msg').innerHTML = "Password must be 7+ characters";
+                }
+            }
+        </script>
     </head>
     <body>
         <div class="container">
@@ -34,9 +42,10 @@ if (isset($_SESSION['registered'])) {
                             <div class="form_stuff">
                                 <input type="text" name="username" class="login" placeholder="Username"><br><br>
                                 
-                                <input type="password" name="password" class="login" placeholder="Password" minlength="7"><br><br>
+                                <input id="password" type="password" name="password" class="login" placeholder="Password" onkeyup="check_length()">
+                                <span id="error_msg"></span><br><br>
 
-                                <input type="password" name="password2" class="login" placeholder="Confirm Password" minlength="7"><br><br>
+                                <input type="password" name="password2" class="login" placeholder="Confirm Password"><br><br>
                                 
                                 <input type="submit" name="submit" class="btn" value="Create"><br><br>
 
