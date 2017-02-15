@@ -53,7 +53,7 @@ $password = $_POST['password'];
                     $q->execute();
                     $results = $q->fetch(PDO::FETCH_ASSOC);
 
-                    if (count($results) > 0 && password_verify($results['password'], PASSWORD_DEFAULT)) {
+                    if (count($results) > 0 && password_verify($password, $results['password'])) {
                         $_SESSION['loggedin'] = $username;
                     }
                 } else {
