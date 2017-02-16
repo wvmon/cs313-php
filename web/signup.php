@@ -29,7 +29,7 @@ if (isset($_SESSION['registered'])) {
                     document.getElementById('error_msg').innerText = "";
                 }
                 else {
-                    document.getElementById('error_msg').innerText = "Username Must Start With Letter  and No Spaces.";
+                    document.getElementById('error_msg').innerText = "Username Must Start With Letter and Have No Spaces.";
                 }
             }
 
