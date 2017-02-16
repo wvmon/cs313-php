@@ -35,6 +35,8 @@ $password = $_POST['password'];
 
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             try {
+
+                // check to see if fields are empty
                 if (!empty($username) && !empty($password)) {
                     /*// match the password with the given username
                     $q = "SELECT password FROM users WHERE username='".$username."'";
@@ -48,6 +50,8 @@ $password = $_POST['password'];
                             $_SESSION['loggedin'] = $username;
                         }
                     }*/
+
+                    // confirm the user exists in the database
                     $q = $db->prepare('SELECT password FROM users WHERE username = :username');
                     $q->bindValue(':username', $username);
                     $q->execute();
