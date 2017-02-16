@@ -55,12 +55,12 @@ if (isset($_SESSION['registered'])) {
                             <legend class="legend2">Signup</legend>
                             <div class="form_stuff">
                                 <input id="username" type="text" name="username" class="login" placeholder="Username"
-                                       onchange="validUsername(document.getElementById('username').value)"><br>
+                                       onkeyup="validUsername(document.getElementById('username').value)"><br>
 
                                 <span id="error_msg"></span><br>
                                 
                                 <input id="password" type="password" name="password" class="login" placeholder="Password"
-                                       onchange="validPassword(document.getElementById('password').value)"><br>
+                                       onkeyup="validPassword(document.getElementById('password').value)"><br>
 
                                 <span id="error_msg2"></span><br>
 
