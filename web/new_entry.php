@@ -19,7 +19,12 @@ $db = get_db();
     <input id="title" type="text" placeholder="INSERT TITLE"><br><br>
     <b><?php
         // outputs e.g. 'Last modified: March 04 1998.'
-        echo date("F j, Y");
+        //echo date("F j, Y");
+        $current_tz_str = date_default_timezone_get();
+        $current_tz = new DateTimeZone($current_tz_str);
+        $now = new DateTime('now', $current_tz);
+        $offset = $current_tz->getOffset($now);
+        echo $offset;
         ?>
     </b><br><br>
     <textarea id ="message" type="text" placeholder="Start your entry" cols="50" rows="10"></textarea><br><br>
