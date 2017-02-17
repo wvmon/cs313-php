@@ -16,13 +16,13 @@ $db = get_db();
 <body>
 <form method="POST" id="entry" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
     <label>Enter New Entry</label><br><br>
-    <input id="title" type="text" placeholder="INSERT TITLE"><br><br>
-    <b><?php
-        // outputs e.g. 'Last modified: March 04, 1998.'
-        echo date("F j, Y");
-        ?>
-    </b><br><br>
-    <textarea id ="message" placeholder="Start your entry" cols="50" rows="10"></textarea><br><br>
+    <input id="title" type="text" name="title" placeholder="INSERT TITLE"><br><br>
+    <input id="date" name="date" type="date" readonly><br><br>
+
+    <script type="text/javascript">
+        document.getElementById('date').value = new Date().toString('M/d/yyyy');
+    </script>
+    <textarea id ="message" name="entry" placeholder="Start your entry" cols="50" rows="10"></textarea><br><br>
     <input type="submit" value="Save">
 </form>
 </body>
