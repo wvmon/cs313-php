@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // regular expressions declared for verification purposes
         // password will be more complex and harder to crack
         $password_match = preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$#", $password);
-        $username_match = preg_match("#^[a-zA-Z][a-zA-Z0-9]{8,20}#", $username);
+        $username_match = preg_match("#^[a-zA-Z][a-zA-Z0-9]{5,20}#", $username);
 
         // check for empty fields
         if (!empty($username) && !empty($password) && !empty($password2)) {
