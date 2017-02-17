@@ -8,7 +8,7 @@
 
 session_start();
 if (isset($_SESSION['loggedin'])) {
-    header("Location: loggedin.php");
+    header("Location: new_entry.php");
     exit;
 }
 ?>
@@ -29,7 +29,7 @@ if (isset($_SESSION['loggedin'])) {
             <div class="row">
                 <div class="col-lg-4"></div>
                 <div class="col-lg-4">
-                    <form action="loggedin.php" id="form" method="POST">
+                    <form action="new_entry.php" id="form" method="POST">
                         <fieldset>
                             <legend class="legend">Login</legend>
                             <div class="form_stuff">
