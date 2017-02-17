@@ -82,6 +82,8 @@ $password = $_POST['password'];
             exit;
         }
         ?>
+        <a href="new_entry.php">New Entry</a>
+        <a href="#">View Entries</a>
         <a href="logout.php">Logout</a>
     </body>
 </html>
