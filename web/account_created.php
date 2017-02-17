@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             $_SESSION['error'] = "Username Already Exists.";
                             header("Location: signup.php");
                             exit;
-                        //}
+                        }
                     /*} else {
                         $_SESSION['error'] = "Username Must Start With Letter and No Spaces.";
                         header("Location: signup.php");
