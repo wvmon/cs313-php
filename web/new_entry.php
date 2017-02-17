@@ -14,7 +14,7 @@ $db = get_db();
     <title></title>
 </head>
 <body>
-<form method="POST" id="entry" action="<?php echo htmlspecialcharas($_SERVER['PHP_SELF']);?>">
+<form method="POST" id="entry" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
     <label>Enter New Entry</label><br><br>
     <input id="title" type="text" placeholder="INSERT TITLE"><br><br>
     <b><?php
