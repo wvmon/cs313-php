@@ -7,6 +7,10 @@
  */
 require "dbConnect.php";
 $db = get_db();
+
+// variables initialized
+$username = $_POST['username'];
+$password = $_POST['password'];
 ?>
 <!DOCTYPE html>
 <html>
