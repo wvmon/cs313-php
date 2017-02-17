@@ -20,7 +20,7 @@ $db = get_db();
     <input id="date" name="date" type="date" readonly><br><br>
 
     <script type="text/javascript">
-        document.getElementById('date').value = new Date().toString('M/d/yyyy');
+        document.getElementById('date').value = Date();
     </script>
     <textarea id ="message" name="entry" placeholder="Start your entry" cols="50" rows="10"></textarea><br><br>
     <input type="submit" value="Save">
