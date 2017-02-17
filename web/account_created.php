@@ -29,10 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // check for empty fields
         if (!empty($username) && !empty($password) && !empty($password2)) {
-
             // validate passwords against regex
             if ($password_match) {
-
                 // confirm both passwords match
                 if ($password == $password2) {
                     $username_check = $db->prepare('SELECT username FROM users WHERE username = :username');
@@ -41,19 +39,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $fetch = $username_check->fetch(PDO::FETCH_ASSOC);
 
                     // validate username against regex
-                    //if ($username_match) {
-
+                    if ($username_match) {
                         // check for existing usernames in the database
                         if ($username == $fetch['username']) {
                             $_SESSION['error'] = "Username Already Exists.";
                             header("Location: signup.php");
                             exit;
                         }
-                    /*} else {
+                    } else {
                         $_SESSION['error'] = "Username Must Start With Letter and No Spaces.";
                         header("Location: signup.php");
                         exit;
-                    }*/
+                    }
 
                     // fortify the password
                     $hash = password_hash($password, PASSWORD_DEFAULT);
