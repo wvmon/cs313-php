@@ -5,7 +5,12 @@
  * Date: 2/16/2017
  * Time: 8:16 PM
  */
+
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
+
 require "dbConnect.php";
+include("loggedin.php");
 //include "loggedin.php";
 $db = get_db();
 
