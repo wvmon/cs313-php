@@ -14,8 +14,8 @@ $db = get_db();
 
 $get_date = date("F j, Y");
 
-$title = filter_var($_POST['title'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
-$entry = filter_var($_POST['entry'], FILTER_SANITIZE_STRING, FILTER_FLAG_ENCODE_LOW);
+$title = filter_var($_POST['title'], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+$entry = filter_var($_POST['entry'], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 $date = $_POST['date'];
 
 session_start();
