@@ -6,7 +6,7 @@
  * Time: 8:16 PM
  */
 require "dbConnect.php";
-include "loggedin.php";
+//include "loggedin.php";
 $db = get_db();
 
 $get_date = date("F j, Y");
