@@ -82,7 +82,6 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
         
         // Display the welcome page to user who successfully logged in
         echo '<h3 class="welcome">Welcome '. $_SESSION['loggedin'] . '!</h3>';
-        echo 'ID is: ' . $_SESSION['user'];
 
         // ACCESS DENIED!!
         if (!isset($_SESSION['loggedin'])) {

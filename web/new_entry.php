@@ -55,7 +55,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title></title>
 </head>
 <body>
-<?php echo "Username is: " . $username; ?>
 <form method="POST" id="entry" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
     <label>Enter New Entry</label><br><br>
     <input id="title" type="text" name="title" placeholder="INSERT TITLE"><br><br>
@@ -63,5 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <textarea id ="message" name="entry" placeholder="Start your entry" cols="50" rows="10"></textarea><br><br>
     <input type="submit" value="Save">
 </form>
+<a href="loggedin.php">Back to home</a>
 </body>
 </html>
