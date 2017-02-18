@@ -13,8 +13,8 @@ require "dbConnect.php";
 $db = get_db();
 
 // Variables initialized
-$username = $_POST['username'];
-$password = $_POST['password'];
+$username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+$password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 $password2 = $_POST['password2'];
 
 // BEGIN SESSION!
