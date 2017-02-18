@@ -10,21 +10,20 @@ $db = get_db();
 
 session_start();
 if ($_SESSION['user']) {
-    $stm = $db->prepare('SELECT title, entry_date FROM journal WHERE user_id = :user_id');
+    /*$stm = $db->prepare('SELECT title, entry_date FROM journal WHERE user_id = :user_id');
     $stm->bindValue(':user_id', $_SESSION['user']);
     $stm->execute();
-    $outcome = $stm->fetch(PDO::FETCH_ASSOC);
+    $outcome = $stm->fetch(PDO::FETCH_ASSOC);*/
 
     // match the password with the given username
-    $q = "SELECT password FROM users WHERE username='".$username."'";
+    $q = "SELECT title, entry_date FROM journal WHERE user_id='".$_SESSION['user']."'";
 
     // parse through all passwords in database
     foreach ($db->query($q) as $row) {
 
         // validate the user's password
         // WELCOME USER!!!
-        if (isset($password) && $password == $row['password']){
-            $_SESSION['loggedin'] = $username;
+        echo '<h3>'. $row . '</h3>';
         }
     }
     echo "ID is: " . $_SESSION['user'];
