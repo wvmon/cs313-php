@@ -6,8 +6,8 @@
  * Time: 6:09 PM
  */
 
-ini_set('display_errors', 'On');
-error_reporting(E_ALL);
+/*ini_set('display_errors', 'On');
+error_reporting(E_ALL);*/
 
 require "dbConnect.php";
 $db = get_db();

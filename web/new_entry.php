@@ -6,11 +6,11 @@
  * Time: 8:16 PM
  */
 
-ini_set('display_errors', 'On');
-error_reporting(E_ALL);
+/*ini_set('display_errors', 'On');
+error_reporting(E_ALL);*/
 
-require "dbConnect.php";
 require "loggedin.php";
+require "dbConnect.php";
 $db = get_db();
 
 $get_date = date("F j, Y");
