@@ -10,9 +10,30 @@ $db = get_db();
 
 $get_date = date("F j, Y");
 
-$title = $_POST['title'];
-$entry = $_POST['entry'];
+$title = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
+$entry = filter_var($_POST['entry'], FILTER_SANITIZE_STRING);
 $date = $_POST['date'];
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    try {
+        if (!empty($title) && !empty($entry)) {
+            $query = "INSERT INTO journal(title, entry_date, entry) VALUES(:title, :entry_date, :entry)";
+            $statement = $db->prepare($query);
+
+            $statement->bindValue(':title', $title);
+            $statement->bindValue(':entry_date', $date);
+            $statement->bindValue(':entry', $entry);
+
+            $statement->execute();
+        } else {
+            header("Location: new_entry.php");
+            exit;
+        }
+    } catch (PDOException $ex) {
+        echo "Error connecting to DB. Details: $ex";
+        die();
+    }
+}
 ?>
 
 <!DOCTYPE html>
