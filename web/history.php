@@ -24,9 +24,7 @@ if ($_SESSION['user']) {
         // validate the user's password
         // WELCOME USER!!!
         echo '<h3>'. $row . '</h3>';
-        }
     }
-    echo "ID is: " . $_SESSION['user'];
 }
 ?>
 <!DOCTYPE html>
