@@ -7,7 +7,12 @@
  */
 require "dbConnect.php";
 $db = get_db();
+
+$date = date("F j, Y");
+$title = $_POST['title'];
+$entry = $_POST['entry'];
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,11 +22,7 @@ $db = get_db();
 <form method="POST" id="entry" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
     <label>Enter New Entry</label><br><br>
     <input id="title" type="text" name="title" placeholder="INSERT TITLE"><br><br>
-    <b><?php
-        // outputs e.g. 'Last modified: March 04, 1998.'
-        echo date("F j, Y");
-        ?>
-    </b><br><br>
+    <input id="date" type="text" name="date" value="<?php echo $date; ?>" readonly><br><br>
     <textarea id ="message" name="entry" placeholder="Start your entry" cols="50" rows="10"></textarea><br><br>
     <input type="submit" value="Save">
 </form>
