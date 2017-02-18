@@ -24,7 +24,7 @@ $date = $_POST['date'];
 <form method="POST" id="entry" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
     <label>Enter New Entry</label><br><br>
     <input id="title" type="text" name="title" placeholder="INSERT TITLE"><br><br>
-    <input id="date" type="date" name="date" value="<?php echo $get_date; ?>" readonly><br><br>
+    <input id="date" type="text" name="date" value="<?php echo $get_date; ?>" readonly><br><br>
     <textarea id ="message" name="entry" placeholder="Start your entry" cols="50" rows="10"></textarea><br><br>
     <input type="submit" value="Save">
 </form>
