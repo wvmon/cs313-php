@@ -10,7 +10,6 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
 require "dbConnect.php";
-include("loggedin.php");
 //include "loggedin.php";
 $db = get_db();
 
