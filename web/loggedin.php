@@ -59,6 +59,12 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 
                     if (password_verify($password, $results['password'])) {
                         $_SESSION['loggedin'] = $username;
+
+                        $row = $db->prepare('SELECT id FROM users WHERE password = :password');
+                        $row->bindValue(':password', $password);
+                        $row->execute();
+                        $table = $row->fetch(PDO::FETCH_ASSOC);
+                        $_SESSION['user'] = (int)$table('id');
                     }
                 } else {
                     $_SESSION['error'] = $msg_array[0];
@@ -74,6 +80,7 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
         
         // Display the welcome page to user who successfully logged in
         echo '<h3 class="welcome">Welcome '. $_SESSION['loggedin'] . '!</h3>';
+        echo "ID is: " . $_SESSION['user'];
 
         // ACCESS DENIED!!
         if (!isset($_SESSION['loggedin'])) {

@@ -18,6 +18,7 @@ $title = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
 $entry = filter_var($_POST['entry'], FILTER_SANITIZE_STRING);
 $date = $_POST['date'];
 
+session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         if (!empty($title) && !empty($entry)) {
