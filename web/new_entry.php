@@ -10,7 +10,7 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
 require "dbConnect.php";
-//include "loggedin.php";
+require "loggedin.php";
 $db = get_db();
 
 $get_date = date("F j, Y");
@@ -52,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title></title>
 </head>
 <body>
+<?php echo "Username is: " . $username; ?>
 <form method="POST" id="entry" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
     <label>Enter New Entry</label><br><br>
     <input id="title" type="text" name="title" placeholder="INSERT TITLE"><br><br>
