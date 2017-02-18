@@ -9,9 +9,9 @@
 /*ini_set('display_errors', 'On');
 error_reporting(E_ALL);*/
 
+include "loggedin.php";
 require "dbConnect.php";
 $db = get_db();
-require "loggedin.php";
 
 $get_date = date("F j, Y");
 
