@@ -20,10 +20,10 @@ if ($_SESSION['user']) {
 
     // parse through all passwords in database
     foreach ($db->query($q) as $row) {
+        $title = $row['title'];
+        $date = $row['entry_date'];
 
-        // validate the user's password
-        // WELCOME USER!!!
-        echo '<h3>'. $row . '</h3>';
+        echo "<h3>$title <br> $date</h3>";
     }
 }
 ?>
