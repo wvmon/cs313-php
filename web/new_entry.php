@@ -6,6 +6,7 @@
  * Time: 8:16 PM
  */
 require "dbConnect.php";
+include "loggedin.php";
 $db = get_db();
 
 $get_date = date("F j, Y");
@@ -17,6 +18,11 @@ $date = $_POST['date'];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         if (!empty($title) && !empty($entry)) {
+            /*$username_check = $db->prepare('SELECT username FROM users WHERE username = :username');
+            $username_check->bindValue(':username', $username);
+            $username_check->execute();
+            $fetch = $username_check->fetch(PDO::FETCH_ASSOC);*/
+
             $query = "INSERT INTO journal(title, entry_date, entry) VALUES(:title, :entry_date, :entry)";
             $statement = $db->prepare($query);
 
@@ -42,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title></title>
 </head>
 <body>
+<?php echo "Username is: " . $username; ?>
 <form method="POST" id="entry" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
     <label>Enter New Entry</label><br><br>
     <input id="title" type="text" name="title" placeholder="INSERT TITLE"><br><br>
