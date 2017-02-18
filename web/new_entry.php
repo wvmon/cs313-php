@@ -21,23 +21,26 @@ $date = $_POST['date'];
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
-        if (!empty($title) && !empty($entry)) {
-            /*$username_check = $db->prepare('SELECT username FROM users WHERE username = :username');
-            $username_check->bindValue(':username', $username);
-            $username_check->execute();
-            $fetch = $username_check->fetch(PDO::FETCH_ASSOC);*/
+        if ($_SESSION['user']) {
+            if (!empty($title) && !empty($entry)) {
+                /*$username_check = $db->prepare('SELECT username FROM users WHERE username = :username');
+                $username_check->bindValue(':username', $username);
+                $username_check->execute();
+                $fetch = $username_check->fetch(PDO::FETCH_ASSOC);*/
 
-            $query = "INSERT INTO journal(title, entry_date, entry) VALUES(:title, :entry_date, :entry)";
-            $statement = $db->prepare($query);
+                $query = "INSERT INTO journal(user_id, title, entry_date, entry) VALUES(:user_id, :title, :entry_date, :entry)";
+                $statement = $db->prepare($query);
 
-            $statement->bindValue(':title', $title);
-            $statement->bindValue(':entry_date', $date);
-            $statement->bindValue(':entry', $entry);
+                $statement->bindValue(':user_id', $_SESSION['user']);
+                $statement->bindValue(':title', $title);
+                $statement->bindValue(':entry_date', $date);
+                $statement->bindValue(':entry', $entry);
 
-            $statement->execute();
-        } else {
-            header("Location: new_entry.php");
-            exit;
+                $statement->execute();
+            } else {
+                header("Location: new_entry.php");
+                exit;
+            }
         }
     } catch (PDOException $ex) {
         echo "Error connecting to DB. Details: $ex";

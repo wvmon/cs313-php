@@ -50,6 +50,7 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
                             $_SESSION['loggedin'] = $username;
                         }
                     }*/
+
                     $id = $db->prepare('SELECT id FROM users WHERE username = :username');
                     $id->bindValue(':username', $username);
                     $id->execute();
@@ -57,6 +58,7 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
                     if ($row) {
                         $_SESSION['user'] = (int)$row['id'];
                     }
+
                     // confirm the user exists in the database
                     $q = $db->prepare('SELECT password FROM users WHERE username = :username');
                     $q->bindValue(':username', $username);
