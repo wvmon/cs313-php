@@ -14,8 +14,8 @@ $db = get_db();
 
 $get_date = date("F j, Y");
 
-$title = filter_var($_POST['title'], FILTER_SANITIZE_STRING);
-$entry = filter_var($_POST['entry'], FILTER_SANITIZE_STRING);
+$title = filter_var($_POST['title'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+$entry = filter_var($_POST['entry'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 $date = $_POST['date'];
 
 session_start();
@@ -23,10 +23,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
         if ($_SESSION['user']) {
             if (!empty($title) && !empty($entry)) {
-                /*$username_check = $db->prepare('SELECT username FROM users WHERE username = :username');
-                $username_check->bindValue(':username', $username);
-                $username_check->execute();
-                $fetch = $username_check->fetch(PDO::FETCH_ASSOC);*/
+                /*$data = $db->prepare('SELECT id FROM journal WHERE title = :title AND entry = :entry');
+                $data->bindValue(':title', $title);
+                $data->bindValue(':entry', $entry);
+                $data->execute();
+                $table = $data->fetch(PDO::FETCH_ASSOC);
+                if ($table) {
+                    $_SESSION['history'] = (int)$table['id'];
+                }*/
 
                 $query = "INSERT INTO journal(user_id, title, entry_date, entry) VALUES(:user_id, :title, :entry_date, :entry)";
                 $statement = $db->prepare($query);

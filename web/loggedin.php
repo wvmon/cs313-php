@@ -9,8 +9,8 @@ require "dbConnect.php";
 $db = get_db();
 
 // variables initialized
-$username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
-$password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+$username = filter_var($_POST['username'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+$password = filter_var($_POST['password'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 ?>
 
 <!DOCTYPE html>
@@ -91,7 +91,7 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
         }
         ?>
         <a href="new_entry.php">New Entry</a>
-        <a href="#">View Entries</a>
+        <a href="history.php">View Entries</a>
         <a href="logout.php">Logout</a>
     </body>
 </html>
