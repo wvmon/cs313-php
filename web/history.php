@@ -33,6 +33,6 @@ if ($_SESSION['user']) {
     <title>History</title>
 </head>
 <body>
-
+<a href="loggedin.php">Homepage</a>
 </body>
 </html>
