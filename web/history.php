@@ -25,7 +25,7 @@ if ($_SESSION['user']) {
         $date = $row['entry_date'];
 
         echo "<div id='comment_box'><h3>$title</h3><p>$date</p><p>$id</p><a href='#' name='edit'><i class=\"fa fa-pencil\" 
-aria-hidden=\"true\"></i></a><a href='#' name='delete'><i class=\"fa fa-trash\" aria-hidden=\"true\"></i>/a></div>";
+aria-hidden=\"true\"></i></a><a href='#' name='delete'><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></a></div>";
     }
 }
 ?>
