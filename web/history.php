@@ -14,16 +14,17 @@ if ($_SESSION['user']) {
     $stm->bindValue(':user_id', $_SESSION['user']);
     $stm->execute();
     $outcome = $stm->fetch(PDO::FETCH_ASSOC);*/
-
     // match the password with the given username
-    $q = "SELECT title, entry_date FROM journal WHERE user_id='".$_SESSION['user']."'";
+
+    $q = "SELECT id,title, entry_date FROM journal WHERE user_id='".$_SESSION['user']."'";
 
     // parse through all passwords in database
     foreach ($db->query($q) as $row) {
+        $id = $row['id'];
         $title = $row['title'];
         $date = $row['entry_date'];
 
-        echo "<div id='comment_box'><h3>$title</h3><p>$date</p><a href='#' name='edit'>Edit</a><a href='#' name='delete'>Delete</a></div>";
+        echo "<div id='comment_box'><h3>$title</h3><p>$date</p><p>$id</p><a href='#' name='edit'>Edit</a><a href='#' name='delete'>Delete</a></div>";
     }
 }
 ?>
