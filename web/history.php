@@ -23,7 +23,7 @@ if ($_SESSION['user']) {
         $title = $row['title'];
         $date = $row['entry_date'];
 
-        echo "<h3>$title <br> $date</h3>";
+        echo "<div id='comment_box'><h3>$title</h3><p>$date</p><br><a href='#' name='edit'>Edit</a><a href='#' name='delete'>Delete</a></div>";
     }
 }
 ?>
