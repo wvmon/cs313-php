@@ -68,7 +68,8 @@ a {
     font-size: 12px;
     padding: 2px 5px;
     width: 50%;
-    margin:2px;
+    width: 50%;
+    margin: 0 auto;
     text-align: center;
     background: #ff0000;
 }
