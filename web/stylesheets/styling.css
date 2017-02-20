@@ -63,6 +63,7 @@ a {
 
 .errorspan {
     border-radius: 2px;
+    font-weight: bold;
     color: white;
     font-family: century gothic;
     font-size: 12px;
