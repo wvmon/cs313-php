@@ -27,6 +27,7 @@ form {
 
 .date {
     background: transparent;
+    text-align: center;
     border-left-style: none;
     border-right-style: none;
 }
