@@ -63,14 +63,14 @@ a {
 
 .errorspan {
     border-radius: 2px;
-    color: brown;
+    color: white;
     font-family: century gothic;
     font-size: 12px;
     padding: 2px 5px;
     width: 50%;
     margin:2px;
     text-align: center;
-    background: antiquewhite;
+    background: #ff0000;
     border: 1px solid #CA4646;
 }
 

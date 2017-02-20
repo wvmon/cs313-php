@@ -29,11 +29,6 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING, FILTER_FLAG_N
         <?php
         session_start();
 
-        $msg_array = [
-            'Username and Password are Required',
-            'Invalid Username or Password'
-        ];
-
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             try {
 
