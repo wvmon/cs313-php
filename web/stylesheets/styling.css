@@ -134,6 +134,7 @@ legend {
 }
 
 .icon {
-    margin: 50px;
+    text-align: center;
+    margin: 25px;
     background-color: white;
 }
