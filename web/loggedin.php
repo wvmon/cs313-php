@@ -87,6 +87,7 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING, FILTER_FLAG_N
         }
         ?>
         <div class="logged">
+            <br>
             <div class="icon"><a href="new_entry.php"><i class="fa fa-file" aria-hidden="true"></i></a></div>
             <div class="icon"><a href="history.php"><i class="fa fa-history" aria-hidden="true"></i></a></div>
             <div class="icon"><a href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i></a></div>
