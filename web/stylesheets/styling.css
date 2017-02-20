@@ -28,6 +28,9 @@ form {
 .date {
     background: transparent;
     text-align: center;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    letter-spacing: 12px;
     border-left-style: none;
     border-right-style: none;
 }
