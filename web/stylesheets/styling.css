@@ -68,12 +68,14 @@ a {
 }
 
 legend {
-    color: #06404e;
+    color: #B6B6B6;
     font-size: 20px;
     text-align: center;
     position: relative;
     width: 100%;
     display: block;
+    font-family: Palatino, serif;
+    letter-spacing: 15px;
 }
 
 .errorspan {
