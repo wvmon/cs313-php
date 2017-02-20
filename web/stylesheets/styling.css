@@ -118,6 +118,11 @@ legend {
     background: #8BC53F;
 }
 
+.logged {
+    width: 50%;
+    margin: auto;
+}
+
 #comment_box {
     margin: 15px 0;
     padding: 5px;
