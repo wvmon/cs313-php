@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="form_stuff">
                         <input id="title" type="text" class="login" name="title" placeholder="INSERT TITLE"><br><br>
                         <input id="date" type="text" name="date" value="<?php echo $get_date; ?>" readonly><br><br>
-                        <textarea id ="message" name="entry" placeholder="Start your entry" cols="100" rows="30"></textarea><br><br>
+                        <textarea id ="message" name="entry" placeholder="Start your entry" cols="50" rows="30"></textarea><br><br>
                         <input type="submit" value="Save">
                     </div>
                 </fieldset>
