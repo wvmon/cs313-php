@@ -52,7 +52,7 @@ if (isset($_SESSION['registered'])) {
                 <div class="col-lg-4">
                     <form action="account_created.php" method="POST">
                         <fieldset>
-                            <legend class="legend2">Signup</legend>
+                            <legend class="signup_legend">Signup</legend>
                             <div class="form_stuff">
                                 <input id="username" type="text" name="username" class="login" placeholder="Username"
                                        onkeyup="validUsername(document.getElementById('username').value)"><br>

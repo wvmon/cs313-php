@@ -52,7 +52,7 @@ a {
     width: 75%;
 }
 
-.legend {
+.login_legend {
     position: relative;
     width: 100%;
     display: block;
@@ -63,7 +63,7 @@ a {
     text-align: center;
 }
 
-.legend2 {
+.signup_legend {
     position: relative;
     width: 100%;
     display: block;
