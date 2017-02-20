@@ -43,10 +43,7 @@ if (isset($_SESSION['loggedin'])) {
                             </div>                                
                         </fieldset>                    
                     </form>
-                </div>
-                <div class="col-lg-4"></div>
-                <div class="row">
-                    <div class="col-sm-12"><?php echo $_SESSION['error']; ?></div>
+                    <?php echo $_SESSION['error']; ?>
                 </div>
             </div>                   
         </div>           
