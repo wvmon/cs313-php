@@ -61,6 +61,19 @@ a {
     text-align: center;
 }
 
+.errorspan {
+    border-radius: 2px;
+    color: brown;
+    font-family: century gothic;
+    font-size: 12px;
+    padding: 2px 5px;
+    width: 50%;
+    margin:2px;
+    text-align: center;
+    background: antiquewhite;
+    border: 1px solid #CA4646;
+}
+
 #comment_box {
     margin: 15px 0px;
     padding: 5px;
