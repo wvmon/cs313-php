@@ -70,7 +70,7 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING, FILTER_FLAG_N
                         $_SESSION['loggedin'] = $username;
                     }
                 } else {
-                    $_SESSION['error'] = $msg_array[0];
+                    $_SESSION['error'] = "<div class='errorspan''>Username and Password are Required</div>";
                     header("Location: login.php");
                     exit;
                 }
@@ -86,7 +86,7 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING, FILTER_FLAG_N
 
         // ACCESS DENIED!!
         if (!isset($_SESSION['loggedin'])) {
-            $_SESSION['error'] = $msg_array[1];
+            $_SESSION['error'] = "<div class='errorspan''>Invalid Username or Password</div>";
             header("Location: login.php");
             exit;
         }
