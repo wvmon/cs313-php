@@ -53,30 +53,15 @@ a {
 }
 
 .login_legend {
-    position: relative;
-    width: 100%;
-    display: block;
     background-color: #04A466;
-    padding: 15px;
-    color: #06404e;
-    font-size: 20px;
-    text-align: center;
 }
 
 .signup_legend {
-    position: relative;
-    width: 100%;
-    display: block;
     background-color: #FB4D59;
-    padding: 15px;
-    color: #06404e;
-    font-size: 20px;
-    text-align: center;
 }
 
 .entry_legend {
     background-color: #DE8624;
-
 }
 
 legend {
