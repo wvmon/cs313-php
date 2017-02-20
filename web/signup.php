@@ -66,7 +66,7 @@ if (isset($_SESSION['registered'])) {
 
                                 <input type="password" name="password2" class="login" placeholder="Confirm Password"><br><br>
                                 
-                                <input type="submit" name="submit" class="btn" value="Create"><br><br>
+                                <div class="sub"><input type="submit" name="submit" class="btn" value="Create"></div><br>
 
                                 <input type="hidden" name="new_user" value="true">
 

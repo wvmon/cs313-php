@@ -41,15 +41,28 @@ form {
 
 .login:focus {
     border-color: #056CB6;
-    box-shadow: 0px 0px 3px 1px #b2b2f8;
+    box-shadow: 0px 0px 3px 1px #B2B2F8;
 }
 
 a {
     text-decoration: none;
 }
 
-.btn {
-    width: 75%;
+.sub input {
+    width: 30%;
+    background: transparent;
+    margin: 0px 25px 0px 25px;
+    padding: 5px 7px;
+    border: 3px solid #B9B1A8;
+    text-decoration: none;
+    color: #B9B1A8;
+    font-weight: 800;
+    transition: all 0.5s;
+}
+
+.sub input:hover {
+    border-color: #3D3C3A;
+    color: #3D3C3A;
 }
 
 .login_legend {
@@ -68,7 +81,6 @@ a {
 }
 
 legend {
-    color: #B6B6B6;
     font-size: 20px;
     text-align: center;
     position: relative;
@@ -90,7 +102,7 @@ legend {
     margin: 0 auto;
     margin-top: 20px;
     text-align: center;
-    background: #ff0000;
+    background: #FF0000;
 }
 
 #comment_box {

@@ -37,7 +37,7 @@ if (isset($_SESSION['loggedin'])) {
                                 
                                 <input id="password" type="password" name="password" class="login" placeholder="Password"><br><br>
                                 
-                                <input type="submit" name="login" class="btn" value="Login"><br><br>
+                                <div class="sub"><input type="submit" name="login" class="btn" value="Login"></div><br>
                                 
                                 <a href="signup.php">Register for an account</a>
                             </div>                                
