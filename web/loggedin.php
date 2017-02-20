@@ -86,10 +86,12 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING, FILTER_FLAG_N
             exit;
         }
         ?>
-        <div class="logged">
-            <a href="new_entry.php"><i class="fa fa-file fa-5x" aria-hidden="true"></i></a>
-            <a href="history.php"><i class="fa fa-history fa-5x" aria-hidden="true"></i></a>
-            <a href="logout.php"><i class="fa fa-sign-out fa-5x" aria-hidden="true"></i></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4"><a href="new_entry.php"><i class="fa fa-file fa-5x" aria-hidden="true"></i></a></div>
+                <div class="col-lg-4"><a href="history.php"><i class="fa fa-history fa-5x" aria-hidden="true"></i></a></div>
+                <div class="col-lg-4"><a href="logout.php"><i class="fa fa-sign-out fa-5x" aria-hidden="true"></i></a></div>
+            </div>
         </div>
     </body>
 </html>
