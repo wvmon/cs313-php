@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     exit;
                 }
             } else {
-                $_SESSION['error'] = "<div class='errorspan'>Password Must be 8-20 Characters long and contain Contain Numbers, letters, CAPS</div>";
+                $_SESSION['error'] = "<div class='errorspan'>Password Must be 8-20 Characters long and Contain Numbers, letters, CAPS</div>";
                 header("Location: signup.php");
                 exit;
             }

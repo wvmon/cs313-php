@@ -87,7 +87,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                 </fieldset>
             </form>
-            <span class="errorspan"><?php echo $_SESSION['error']; ?></span>
         </div>
     </div>
 </div>
