@@ -94,6 +94,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </div>
 </div>
-<a href="loggedin.php"><i class="fa fa-home" aria-hidden="true"></i></a>
+<a href="loggedin.php"><i class="fa fa-home fa-5x" aria-hidden="true"></i></a>
 </body>
 </html>

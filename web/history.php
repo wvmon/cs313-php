@@ -24,8 +24,8 @@ if ($_SESSION['user']) {
         $title = $row['title'];
         $date = $row['entry_date'];
 
-        echo "<div id='comment_box'><h3>$title</h3><p>$date</p><p>$id</p><a href='#' name='edit'><i class=\"fa fa-pencil\" 
-aria-hidden=\"true\"></i></a><a href='#' name='delete'><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></a></div>";
+        echo "<div id='comment_box'><h3>$title</h3><p>$date</p><p>$id</p><a href='#' name='edit'><i class=\"fa fa-pencil fa-3x\" 
+aria-hidden=\"true\"></i></a><a href='#' name='delete'><i class=\"fa fa-trash fa-3x\" aria-hidden=\"true\"></i></a></div>";
     }
 }
 ?>
@@ -42,6 +42,6 @@ aria-hidden=\"true\"></i></a><a href='#' name='delete'><i class=\"fa fa-trash\" 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<a href="loggedin.php"><i class="fa fa-home" aria-hidden="true"></i></a>
+<a href="loggedin.php"><i class="fa fa-home fa-5x" aria-hidden="true"></i></a>
 </body>
 </html>
