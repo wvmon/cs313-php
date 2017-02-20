@@ -86,8 +86,8 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING, FILTER_FLAG_N
             exit;
         }
         ?>
-        <div class="icon"><a href="new_entry.php" class="icon"><i class="fa fa-file fa-5x" aria-hidden="true"></i></a></div>
-        <div class="icon"><a href="history.php" class="icon"><i class="fa fa-history fa-5x" aria-hidden="true"></i></a></div>
-        <div class="icon"><a href="logout.php" class="icon"><i class="fa fa-sign-out fa-5x" aria-hidden="true"></i></a></div>
+        <div class="icon"><a href="new_entry.php" class="icon"><i class="fa fa-file" aria-hidden="true"></i></a></div>
+        <div class="icon"><a href="history.php" class="icon"><i class="fa fa-history" aria-hidden="true"></i></a></div>
+        <div class="icon"><a href="logout.php" class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></a></div>
     </body>
 </html>
