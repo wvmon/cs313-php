@@ -53,19 +53,21 @@ a {
 }
 
 .login_legend {
+    padding: 15px;
     background-color: #04A466;
 }
 
 .signup_legend {
+    padding: 15px;
     background-color: #FB4D59;
 }
 
 .entry_legend {
+    padding: 15px;
     background-color: #DE8624;
 }
 
 legend {
-    padding: 15px;
     color: #06404e;
     font-size: 20px;
     text-align: center;
