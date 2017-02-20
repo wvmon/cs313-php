@@ -19,11 +19,16 @@ form {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
 
-    background: transparent;
     outline: none;
     border: 1px solid #ccc;
     padding: 12px;
     min-width: 75%;
+}
+
+.date {
+    background: transparent;
+    border-left-style: none;
+    border-right-style: none;
 }
 
 .login:focus {
