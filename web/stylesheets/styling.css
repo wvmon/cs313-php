@@ -31,6 +31,8 @@ form {
     font-family: Georgia, serif;
     font-weight: bold;
     letter-spacing: 12px;
+    border-top: 3px solid #2FCA5E;
+    border-bottom: 3px solid #2FCA5E;
     border-left-style: none;
     border-right-style: none;
 }
