@@ -72,6 +72,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <textarea id ="message" name="entry" placeholder="Start your entry" cols="50" rows="10"></textarea><br><br>
     <input type="submit" value="Save">
 </form>
-<a href="loggedin.php">Back to home</a>
+<a href="loggedin.php"><i class="fa fa-home" aria-hidden="true"></i></a>
 </body>
 </html>

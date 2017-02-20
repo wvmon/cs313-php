@@ -42,6 +42,6 @@ aria-hidden=\"true\"></i></a></h2><h2><a href='#' name='delete'><i class=\"fa fa
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<a href="loggedin.php">Homepage</a>
+<a href="loggedin.php"><i class="fa fa-home" aria-hidden="true"></i></a>
 </body>
 </html>
