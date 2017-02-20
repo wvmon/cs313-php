@@ -132,3 +132,7 @@ legend {
 #comment_box > h3 {
     color: blue;
 }
+
+.icon {
+    background-color: white;
+}
