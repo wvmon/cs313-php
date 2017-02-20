@@ -14,11 +14,11 @@ form {
 
 .login {
     width: 250px;
-    
+
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    
+
     outline: none;
     border: 1px solid #ccc;
     padding: 12px;
