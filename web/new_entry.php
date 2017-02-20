@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="col-lg-12">
             <form method="POST" id="entry" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
                 <fieldset>
-                    <label>Enter New Entry</label><br><br>
+                    <legend>Enter New Entry</legend><br><br>
                     <div class="form_stuff">
                         <input id="title" type="text" class="login" name="title" placeholder="INSERT TITLE"><br><br>
                         <input id="date" type="text" name="date" value="<?php echo $get_date; ?>" readonly><br><br>
