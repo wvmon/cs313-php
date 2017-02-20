@@ -119,9 +119,8 @@ legend {
 }
 
 .logged {
-    width: 50%;
+    width: 90%;
     margin: auto;
-    display: inline;
 }
 
 #comment_box {
@@ -135,6 +134,7 @@ legend {
 }
 
 .icon {
+    display: inline;
     margin: 25px;
     text-align: center;
     width: 200px;
