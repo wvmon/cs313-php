@@ -105,6 +105,21 @@ legend {
     background: #FF0000;
 }
 
+.success {
+    border-radius: 2px;
+    font-weight: bold;
+    color: white;
+    font-family: century gothic;
+    font-size: 12px;
+    padding: 2px 5px;
+    width: 50%;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+    background: #8BC53F;
+}
+
 #comment_box {
     margin: 15px 0px;
     padding: 5px;

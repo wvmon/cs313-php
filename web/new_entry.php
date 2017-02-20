@@ -41,7 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $statement->bindValue(':entry', $entry);
 
                 $statement->execute();
+
+                $_SESSION['message'] = "<div class='success'>Entry Successfully Saved</div>";
             } else {
+                $_SESSION['message'] = "<div class='errorspan'>Title or Entry is Missing</div>";
                 header("Location: new_entry.php");
                 exit;
             }
@@ -87,6 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                 </fieldset>
             </form>
+            <?php echo $_SESSION['message']; ?>
         </div>
     </div>
 </div>
