@@ -66,13 +66,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<form method="POST" id="entry" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+<!--<form method="POST" id="entry" action="<?php /*echo htmlspecialchars($_SERVER['PHP_SELF']);*/?>">
     <label>Enter New Entry</label><br><br>
     <input id="title" type="text" class="login" name="title" placeholder="INSERT TITLE"><br><br>
-    <input id="date" type="text" name="date" value="<?php echo $get_date; ?>" readonly><br><br>
+    <input id="date" type="text" name="date" value="<?php /*echo $get_date; */?>" readonly><br><br>
     <textarea id ="message" name="entry" placeholder="Start your entry" cols="50" rows="10"></textarea><br><br>
     <input type="submit" value="Save">
-</form>
+</form>-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <form method="POST" id="entry" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+                <fieldset>
+                    <label>Enter New Entry</label><br><br>
+                    <div class="form_stuff">
+                        <input id="title" type="text" class="login" name="title" placeholder="INSERT TITLE"><br><br>
+                        <input id="date" type="text" name="date" value="<?php echo $get_date; ?>" readonly><br><br>
+                        <textarea id ="message" name="entry" placeholder="Start your entry" cols="50" rows="10"></textarea><br><br>
+                        <input type="submit" value="Save">
+                    </div>
+                </fieldset>
+            </form>
+            <span class="errorspan"><?php echo $_SESSION['error']; ?></span>
+        </div>
+    </div>
+</div>
 <a href="loggedin.php"><i class="fa fa-home" aria-hidden="true"></i></a>
 </body>
 </html>
