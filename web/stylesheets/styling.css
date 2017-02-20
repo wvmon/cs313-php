@@ -22,7 +22,7 @@ form {
     outline: none;
     border: 1px solid #ccc;
     padding: 12px;
-    width: 75%;
+    min-width: 75%;
 }
 
 .login:focus {
