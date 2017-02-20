@@ -45,7 +45,7 @@ if (isset($_SESSION['loggedin'])) {
                     </form>
                     <span class="errorspan"><?php echo $_SESSION['error']; ?></span>
                 </div>
-                <div class="col-lg-4"></div>
+                <div class="col-lg-4"><p>hello</p></div>
             </div>                   
         </div>           
     </body>
