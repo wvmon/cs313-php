@@ -35,6 +35,7 @@ form {
     border-bottom: 3px solid #2FCA5E;
     border-left-style: none;
     border-right-style: none;
+    padding: 8px 0px;
 }
 
 .login:focus {
