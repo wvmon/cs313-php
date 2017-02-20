@@ -42,12 +42,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     if ($username_match) {
                         // check for existing usernames in the database
                         if ($username == $fetch['username']) {
-                            $_SESSION['error'] = "Username Already Exists.";
+                            $_SESSION['error'] = "<div class='errorspan'>Username Already Exists</div>";
                             header("Location: signup.php");
                             exit;
                         }
                     } else {
-                        $_SESSION['error'] = "Username Must Start With Letter and No Spaces.";
+                        $_SESSION['error'] = "<div class='errorspan'>Username Must Start With Letter and No Spaces</div>";
                         header("Location: signup.php");
                         exit;
                     }
@@ -65,17 +65,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     $statement->execute();
                 } else {
-                    $_SESSION['error'] = "Passwords Do Not Match.";
+                    $_SESSION['error'] = "<div class='errorspan'>Passwords Do Not Match</div>";
                     header("Location: signup.php");
                     exit;
                 }
             } else {
-                $_SESSION['error'] = "Password Must be 8-20 Characters long and contain Contain Numbers, letters, CAPS.";
+                $_SESSION['error'] = "<div class='errorspan'>Password Must be 8-20 Characters long and contain Contain Numbers, letters, CAPS</div>";
                 header("Location: signup.php");
                 exit;
             }
         } else {
-            $_SESSION['error'] = "Required Field(s) are Empty";
+            $_SESSION['error'] = "<div class='errorspan'>Required Field(s) are Empty</div>";
             header("Location: signup.php");
             exit;
         }
@@ -91,3 +91,17 @@ if (isset($_POST['new_user'])) {
     exit;
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Account Created</title>
+    <meta charset="utf-8">
+    <meta name="viewort" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/styling.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+</body>
+</html>
