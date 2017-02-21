@@ -135,10 +135,12 @@ legend {
 
 .welcome {
     font-family: Courier, monospace;
-    letter-spacing: 5px;
+    letter-spacing: 7px;
     text-align: center;
     background-color: #7F909A;
     padding: 50px 0;
+    margin-top: 0;
+    margin-bottom: 70px;
 }
 
 .boxes {
