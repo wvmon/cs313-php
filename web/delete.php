@@ -8,9 +8,7 @@
 require "dbConnect.php";
 $db = get_db();
 
-if ($_SESSION['journal']) {
-    echo '<h3 class="welcome">Welcome '. $_SESSION['journal'] . '!</h3>';
-}
+echo '<h3 class="welcome">Welcome '. $_SESSION['journal'] . '!</h3>';
 
 ?>
 <!DOCTYPE html>
