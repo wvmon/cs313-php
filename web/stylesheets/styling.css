@@ -133,15 +133,12 @@ legend {
     color: blue;
 }
 
-.icon {
-    width: 100px;
-    display: inline;
-    margin: 5px;
-    padding: 10px 20px;
+.welcome {
+    font-family: Courier, monospace;
+    letter-spacing: 5px;
     text-align: center;
-    font-size: 60px;
-    background-color: white;
-    border-radius: 10px;
+    background-color: #7F909A;
+    padding: 50px 0;
 }
 
 .boxes {
