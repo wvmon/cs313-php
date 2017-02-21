@@ -94,6 +94,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </div>
 </div>
-<a href="loggedin.php"><i class="fa fa-home fa-5x" aria-hidden="true"></i></a>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <a href="new_entry.php"><div class="boxes"><a href="loggedin.php"><i class="fa fa-home" aria-hidden="true"><p>Homepage</p></i></div></a>
+        </div>
+    </div>
+</div>
 </body>
 </html>
