@@ -118,11 +118,6 @@ legend {
     background: #8BC53F;
 }
 
-.logged {
-    width: 80%;
-    margin: auto;
-}
-
 #comment_box {
     margin: 15px 0;
     padding: 5px;
@@ -135,12 +130,13 @@ legend {
 
 .welcome {
     font-family: Courier, monospace;
-    letter-spacing: 7px;
+    letter-spacing: 5px;
     text-align: center;
     background-color: #7F909A;
     padding: 50px 0;
     margin-top: 0;
     margin-bottom: 70px;
+    font-weight: bold;
 }
 
 .boxes {
@@ -151,7 +147,6 @@ legend {
     margin-bottom: 30px;
     border: 8px solid #AE9C96;
     background-color: #DDDAD6;
-    text-align: center;
     border-radius: 10px;
     transition: all 0.5s;
 }
@@ -162,10 +157,12 @@ legend {
 }
 
 .boxes i {
-    position: absolute;
-    top: 30%;
-    left: 10%;
-    width: 80%;
+    padding-top: 25px;
+    padding-right: 10px;
+    text-align: center;
+    position: relative;
+    width: 300px;
+    height: 150px;
     font-size: 60px;
     color: #AE9C96;
     transition: all 0.5s;
