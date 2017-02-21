@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $statement->execute();
 
-                $_SESSION['message'] = "<div class='success'>Entry Successfully Saved</div>";
+                $_SESSION['message'] = "<div class='success'>Entry Successfully Saved" . $_SESSION['journal'] . "</div>";
             } else {
                 $_SESSION['message'] = "<div class='errorspan'>Title or Entry is Missing</div>";
                 header("Location: new_entry.php");
