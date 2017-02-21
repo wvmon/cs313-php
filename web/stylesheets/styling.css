@@ -202,10 +202,20 @@ legend {
 
 .edit {
     background-color: #127C96;
+    transition: all 0.5s;
+}
+
+.edit:hover {
+    background-color: #16A79D;
 }
 
 .delete {
     background-color: #BC1010;
+    transition: all 0.5s;
+}
+
+.delete:hover {
+    background-color: #CF4858;
 }
 
 #comment_box > a {
