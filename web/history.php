@@ -26,7 +26,7 @@ if ($_SESSION['user']) {
         $entry = $row['entry'];
 
         echo "<div id='comment_box'><h3>$title</h3><p>$date</p><p>$entry</p><a href='#' name='edit'><i class='fa fa-pencil icon edit' 
-aria-hidden='true'></i></a><a href='delete.php' name='delete'><i class='fa fa-trash icon delete' aria-hidden='true'></i></a></div>";
+aria-hidden='true'></i></a><a href='#' name='delete'><i class='fa fa-trash icon delete' aria-hidden='true'></i></a></div>";
     }
 }
 ?>
