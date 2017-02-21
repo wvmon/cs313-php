@@ -42,6 +42,12 @@ aria-hidden=\"true\"></i></a><a href='#' name='delete'><i class=\"fa fa-trash fa
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<a href="loggedin.php"><i class="fa fa-home fa-5x" aria-hidden="true"></i></a>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <a href="new_entry.php"><div class="boxes"><a href="loggedin.php"><i class="fa fa-home" aria-hidden="true"><p>Homepage</p></i></div></a>
+        </div>
+    </div>
+</div>
 </body>
 </html>
