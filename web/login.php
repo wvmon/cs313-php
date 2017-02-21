@@ -25,6 +25,7 @@ if (isset($_SESSION['loggedin'])) {
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
+    <h1 class="main_title">Personal Journal Entry</h1>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4"></div>

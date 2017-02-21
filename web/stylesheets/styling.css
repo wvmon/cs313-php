@@ -2,6 +2,15 @@ body {
     background-color: #4B4D52 !important;
 }
 
+.main_title {
+    font-family: Garamond Serif serif;
+    font-weight: bold;
+    padding-top: 25px;
+    text-align: center;
+    letter-spacing: 5px;
+    color: #EDD5D1;
+}
+
 form {
     margin: 0 auto;
     margin-top: 150px;
