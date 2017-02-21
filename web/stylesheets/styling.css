@@ -130,7 +130,7 @@ legend {
     font-family: Courier, monospace;
     letter-spacing: 5px;
     background-color: #7F909A;
-    padding: 15px 0;
+    padding: 15px 15px;
     margin-top: 0;
     font-weight: bold;
 }
@@ -139,6 +139,7 @@ legend {
     color: #CBCBCB;
     letter-spacing: 5px;
     font-size: 16px;
+    padding: 0 15px;
 }
 
 .welcome {
@@ -187,4 +188,26 @@ legend {
 
 .boxes i p {
     font-size: 20px;
+}
+
+.icon {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 36px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: #FAF9F4;
+}
+
+.edit {
+    background-color: #127C96;
+}
+
+.delete {
+    background-color: #BC1010;
+}
+
+#comment_box > a {
+    margin: 0 8px;
 }

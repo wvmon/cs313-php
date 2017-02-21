@@ -24,8 +24,8 @@ if ($_SESSION['user']) {
         $title = $row['title'];
         $date = $row['entry_date'];
 
-        echo "<div id='comment_box'><h3>$title</h3><p>$date</p><p>$id</p><a href='#' name='edit'><i class=\"fa fa-pencil fa-3x\" 
-aria-hidden=\"true\"></i></a><a href='#' name='delete'><i class=\"fa fa-trash fa-3x\" aria-hidden=\"true\"></i></a></div>";
+        echo "<div id='comment_box'><h3>$title</h3><p>$date</p><p>$id</p><a href='#' name='edit'><i class='fa fa-pencil icon edit' 
+aria-hidden='true'></i></a><a href='#' name='delete'><i class='fa fa-trash icon delete' aria-hidden='true'></i></a></div>";
     }
 }
 ?>
