@@ -125,7 +125,18 @@ legend {
 }
 
 #comment_box > h3 {
-    color: blue;
+    font-family: Courier, monospace;
+    letter-spacing: 5px;
+    background-color: #7F909A;
+    padding: 15px 0;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+#comment_box > p {
+    color: #CBCBCB;
+    letter-spacing: 5px;
+    font-size: 16px;
 }
 
 .welcome {
