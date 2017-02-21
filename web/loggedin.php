@@ -89,13 +89,13 @@ $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING, FILTER_FLAG_N
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
-                    <a href="new_entry.php"><div class="boxes"><i class="fa fa-file" aria-hidden="true"><br><p>New Entry</p></i></div></a>
+                    <a href="new_entry.php"><div class="boxes"><i class="fa fa-file" aria-hidden="true"><p>New Entry</p></i></div></a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="history.php"><div class="boxes"><i class="fa fa-history" aria-hidden="true"><br><p>View Entries</p></i></div></a>
+                    <a href="history.php"><div class="boxes"><i class="fa fa-history" aria-hidden="true"><p>View Entries</p></i></div></a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="logout.php"><div class="boxes"><i class="fa fa-sign-out" aria-hidden="true"><br><p>Signout</p></i></div></a>
+                    <a href="logout.php"><div class="boxes"><i class="fa fa-sign-out" aria-hidden="true"><p>Signout</p></i></div></a>
                 </div>
             </div>
         </div>
