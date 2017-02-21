@@ -122,7 +122,8 @@ legend {
     margin: 0 auto;
     width: 75%;
     padding: 15px;
-    border: 1px solid #CBCBCB;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #comment_box > h3 {
