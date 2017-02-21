@@ -151,14 +151,3 @@ legend {
     background-color: #fff;
     text-align: center;
 }
-
-.boxes i {
-    position: absolute;
-    top: 40%;
-    left: 10%;
-    width: 80%;
-    font-weight: 600;
-    color: #D0CABF;
-    font-family: Garamond;
-    letter-spacing: 7px;
-}
