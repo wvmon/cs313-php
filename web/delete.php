@@ -8,6 +8,10 @@
 require "dbConnect.php";
 $db = get_db();
 
+if ($_SESSION['journal']) {
+    echo '<h3 class="welcome">Welcome '. $_SESSION['journal'] . '!</h3>';
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,6 +26,5 @@ $db = get_db();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<?php echo $_SESSION['journal']; ?>
 </body>
 </html>
