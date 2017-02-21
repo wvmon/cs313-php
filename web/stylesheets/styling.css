@@ -148,12 +148,12 @@ legend {
     width: 300px;
     height: 150px;
     background-color: #fff;
-    text-align: center;
     border-radius: 10px;
 }
 
 .boxes i {
     position: absolute;
+    text-align: center;
     top: 30%;
     left: 10%;
     width: 80%;
