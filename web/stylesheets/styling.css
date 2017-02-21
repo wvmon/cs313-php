@@ -146,7 +146,7 @@ legend {
 
 .boxes {
     width: 300px;
-    height: 200px;
+    height: 150px;
     margin: auto;
     background-color: #fff;
     text-align: center;
@@ -154,9 +154,10 @@ legend {
 
 .boxes i {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 10%;
     width: 80%;
     font-size: 60px;
     color: #D0CABF;
+    border-radius: 10px;
 }
