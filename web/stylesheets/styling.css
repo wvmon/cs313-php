@@ -119,8 +119,9 @@ legend {
 }
 
 #comment_box {
-    margin: 15px 0;
-    padding: 5px;
+    width: 75%;
+    margin: 20px 0;
+    padding: 15px;
     border: 1px solid #CBCBCB;
 }
 
