@@ -35,13 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $query = "INSERT INTO journal(user_id, title, entry_date, entry) VALUES(:user_id, :title, :entry_date, :entry)";
                 $statement = $db->prepare($query);
 
-                $id = $db->prepare('SELECT id FROM journal WHERE username = $_SESSION[\'user\'], title = :title, entry_date = :entry_date, entry = :entry');
-                $id->execute();
-                $row = $id->fetch(PDO::FETCH_ASSOC);
-                if ($row) {
-                    $_SESSION['journal'] = (int)$row['id'];
-                }
-
                 $statement->bindValue(':user_id', $_SESSION['user']);
                 $statement->bindValue(':title', $title);
                 $statement->bindValue(':entry_date', $date);
@@ -49,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $statement->execute();
 
-                $_SESSION['message'] = "<div class='success'>Entry Successfully Saved" . $_SESSION['journal'] . "</div>";
+                $_SESSION['message'] = "<div class='success'>Entry Successfully Saved</div>";
             } else {
                 $_SESSION['message'] = "<div class='errorspan'>Title or Entry is Missing</div>";
                 header("Location: new_entry.php");

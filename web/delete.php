@@ -8,8 +8,6 @@
 require "dbConnect.php";
 $db = get_db();
 
-echo '<h3 class="welcome">Welcome '. $_SESSION['journal'] . '!</h3>';
-
 ?>
 <!DOCTYPE html>
 <html>
