@@ -93,7 +93,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </div>
     <div class="row">
+        <div class="col-lg-4"></div>
         <div class="col-lg-4"><?php echo $_SESSION['message']; ?></div>
+        <div class="col-lg-4"></div>
     </div>
 </div>
 <div class="container">
