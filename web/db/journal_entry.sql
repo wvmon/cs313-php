@@ -11,7 +11,7 @@ CREATE TABLE users(
 CREATE TABLE journal(
     id SERIAL PRIMARY KEY NOT NULL,
     user_id INT REFERENCES users(id),
-    title VARCHAR(100) NOT NULL,
+    title VARCHAR(255) NOT NULL,
     entry_date DATE NOT NULL,
     entry TEXT NOT NULL,
     attachments TEXT

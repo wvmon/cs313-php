@@ -90,8 +90,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </div>
                 </fieldset>
             </form>
-            <?php echo $_SESSION['message']; ?>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4"><?php echo $_SESSION['message']; ?></div>
     </div>
 </div>
 <div class="container">
