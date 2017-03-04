@@ -26,6 +26,7 @@ if (isset($_SESSION['loggedin'])) {
     </head>
     <body>
     <h1 class="main_title">Personal Journal Entry</h1>
+    <h1>Testing</h1>
         <div class="container">
             <div class="row">
                 <div class="col-lg-4"></div>
