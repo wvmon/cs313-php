@@ -39,7 +39,7 @@ if (isset($_SESSION['registered'])) {
                     document.getElementById('error_msg2').innerText = "";
                 }
                 else {
-                    document.getElementById('error_msg2').innerText = "Password Muse be 8-20 Characters long and contain " +
+                    document.getElementById('error_msg2').innerText = "Password Must Be 8-20 Characters Long and Contain " +
                         "Numbers, letters, CAPS.";
                 }
             }
