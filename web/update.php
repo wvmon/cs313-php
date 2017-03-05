@@ -10,8 +10,8 @@ $db = get_db();
 
 $get_date = date("F j, Y");
 
-if (isset($_GET['s'])) {
-    $id = $_GET['s'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
 }
 ?>
 
@@ -29,8 +29,8 @@ if (isset($_GET['s'])) {
 </head>
 <body>
 <?php
-if(isset($_GET['s'])) {
-    $id = $_GET['s'];
+if(isset($_GET['id'])) {
+    $id = $_GET['id'];
     //$q = "SELECT title, entry FROM journal WHERE id='" . $id . "'";
 
 // parse through all passwords in database

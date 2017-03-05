@@ -10,12 +10,6 @@ $db = get_db();
 
 session_start();
 if ($_SESSION['user']) {
-    /*$stm = $db->prepare('SELECT title, entry_date FROM journal WHERE id = :user_id');
-    $stm->bindValue(':user_id', $_SESSION['user']);
-    $stm->execute();
-    $outcome = $stm->fetch(PDO::FETCH_ASSOC);*/
-    // match the password with the given username
-
     $q = "SELECT id,title, entry_date, entry FROM journal WHERE user_id='".$_SESSION['user']."'";
 
     // parse through all passwords in database
@@ -25,15 +19,7 @@ if ($_SESSION['user']) {
         $date = $row['entry_date'];
         $entry = $row['entry'];
 
-        $stm = $db->prepare('SELECT title, entry FROM journal WHERE id = :id');
-        $stm->bindValue(':id', $id);
-        $stm->execute();
-        $outcome = $stm->fetch(PDO::FETCH_ASSOC);
-        if ($outcome) {
-            $s = (int)$outcome['id'];
-        }
-
-        echo "<div id='comment_box'><p>$id</p><h3>$title</h3><p>$date</p><p>$entry</p><a href='update.php?id=<php? echo $s ?>'
+        echo "<div id='comment_box'><p>$id</p><h3>$title</h3><p>$date</p><p>$entry</p><a href='update.php?id=<php? echo $id ?>'
 name='edit'><i class='fa fa-pencil icon edit' aria-hidden='true'></i></a><a href='#' name='delete'><i class='fa fa-trash icon delete' 
 aria-hidden='true'></i></a></div>";
     }
