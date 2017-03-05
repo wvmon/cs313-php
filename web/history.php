@@ -20,7 +20,7 @@ if ($_SESSION['user']) {
 
     // parse through all passwords in database
     foreach ($db->query($q) as $row) {
-        $id = (int)$row['id'];
+        $id = $row['id'];
         $title = $row['title'];
         $date = $row['entry_date'];
         $entry = $row['entry'];

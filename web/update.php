@@ -47,12 +47,12 @@ if(isset($_GET['id'])) {
                 <fieldset>
                     <legend class="entry_legend">Enter New Entry</legend><br><br>
                     <div class="form_stuff">
-                        <input id="title" type="text" class="login" name="title" placeholder="INSERT TITLE" value="?php echo $id; ?>">
+                        <input id="title" type="text" class="login" name="title" placeholder="INSERT TITLE" value="<?php echo $id; ?>">
                         <br><br>
                         <input id="date" type="text" class="date" style="min-width: 75%" name="date" value="<?php echo $get_date; ?>" readonly>
                         <br><br>
                         <input id ="message" name="entry" class="login" placeholder="START YOUR ENTRY" cols="50"
-                                  rows="30" style="min-width: 75%" value="?php echo $entry; ?>">
+                                  rows="30" style="min-width: 75%" value="<?php echo $entry; ?>">
                         <br><br>
                         <div class="sub"><input type="submit" class="btn" name="update" value="Update"></div><br>
                     </div>
