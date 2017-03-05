@@ -45,6 +45,12 @@ if(isset($_GET['id'])) {
         $title = $row['title'];
         $entry = $row['entry'];
     }*/
+
+    $getselect=mysql_query("SELECT title, entry FROM journal WHERE id='$id'");
+    while($profile=mysql_fetch_array($getselect)) {
+        $title = $profile['title'];
+        $entry = $profile['entry'];
+    }
 }
 ?>
 <div class="container">
