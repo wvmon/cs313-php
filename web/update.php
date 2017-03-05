@@ -29,7 +29,7 @@ if (isset($_GET['id'])) {
 </head>
 <body>
 <?php
-/*if(isset($_GET['id'])) {
+if(isset($_GET['id'])) {
     $id = $_GET['id'];
     $q = "SELECT title, entry FROM journal WHERE id='" . $id . "'";
 
@@ -39,7 +39,7 @@ if (isset($_GET['id'])) {
         $entry = $row['entry'];
     }
 }
-*/?>
+?>
 <div class="container">
     <div class="row">
         <div class="col-lg-12">
