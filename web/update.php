@@ -10,8 +10,8 @@ $db = get_db();
 
 $get_date = date("F j, Y");
 
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
+if (isset($_GET['s'])) {
+    $id = $_GET['s'];
 }
 ?>
 
@@ -29,15 +29,8 @@ if (isset($_GET['id'])) {
 </head>
 <body>
 <?php
-if(isset($_GET['id'])) {
-    $id = $_GET['id'];
-
-    /*$q = $db->prepare('SELECT title, entry FROM journal WHERE id = :id');
-    $q->bindValue(':id', $id);
-    $q->execute();
-    $results = $q->fetch(PDO::FETCH_ASSOC);
-    $title = $results['title'];
-    $entry = $results['entry'];*/
+if(isset($_GET['s'])) {
+    $id = $_GET['s'];
     //$q = "SELECT title, entry FROM journal WHERE id='" . $id . "'";
 
 // parse through all passwords in database
@@ -45,12 +38,6 @@ if(isset($_GET['id'])) {
         $title = $row['title'];
         $entry = $row['entry'];
     }*/
-
-    $getselect=mysql_query("SELECT title, entry FROM journal WHERE id='$id'");
-    while($profile=mysql_fetch_array($getselect)) {
-        $title = $profile['title'];
-        $entry = $profile['entry'];
-    }
 }
 ?>
 <div class="container">
