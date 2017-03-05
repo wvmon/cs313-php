@@ -5,14 +5,14 @@
  * Date: 3/5/2017
  * Time: 1:49 PM
  */
-/*require "dbConnect.php";
+require "dbConnect.php";
 $db = get_db();
 
 $get_date = date("F j, Y");
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-}*/
+}
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +47,7 @@ if(isset($_GET['id'])) {
                 <fieldset>
                     <legend class="entry_legend">Enter New Entry</legend><br><br>
                     <div class="form_stuff">
-                        <input id="title" type="text" class="login" name="title" placeholder="INSERT TITLE" value="?php echo $title; ?>">
+                        <input id="title" type="text" class="login" name="title" placeholder="INSERT TITLE" value="?php echo $id; ?>">
                         <br><br>
                         <input id="date" type="text" class="date" style="min-width: 75%" name="date" value="<?php echo $get_date; ?>" readonly>
                         <br><br>
