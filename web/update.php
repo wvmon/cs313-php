@@ -51,8 +51,8 @@ if(isset($_GET['id'])) {
                         <br><br>
                         <input id="date" type="text" class="date" style="min-width: 75%" name="date" value="<?php echo $get_date; ?>" readonly>
                         <br><br>
-                        <textarea id ="message" name="entry" class="login" placeholder="START YOUR ENTRY" cols="50"
-                                  rows="30" style="min-width: 75%" value="?php echo $entry; ?>"></textarea>
+                        <input id ="message" name="entry" class="login" placeholder="START YOUR ENTRY" cols="50"
+                                  rows="30" style="min-width: 75%" value="?php echo $entry; ?>">
                         <br><br>
                         <div class="sub"><input type="submit" class="btn" name="update" value="Update"></div><br>
                     </div>
