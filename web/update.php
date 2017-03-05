@@ -31,7 +31,14 @@ if (isset($_GET['id'])) {
 <?php
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
-    $q = "SELECT title, entry FROM journal WHERE id='" . $id . "'";
+
+    $q = $db->prepare('SELECT title, entry FROM journal WHERE id = :id');
+    $q->bindValue(':id', $id);
+    $q->execute();
+    $results = $q->fetch(PDO::FETCH_ASSOC);
+    $title = $results['title'];
+    $entry = $results['entry'];
+    //$q = "SELECT title, entry FROM journal WHERE id='" . $id . "'";
 
 // parse through all passwords in database
     /*foreach ($db->query($q) as $row) {
