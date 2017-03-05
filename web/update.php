@@ -47,7 +47,7 @@ if(isset($_GET['id'])) {
                 <fieldset>
                     <legend class="entry_legend">Enter New Entry</legend><br><br>
                     <div class="form_stuff">
-                        <input id="title" type="text" class="login" name="title" placeholder="INSERT TITLE" value="?php echo $title; ?>">
+                        <input id="title" type="text" class="login" name="title" placeholder="INSERT TITLE" value="?php echo $id; ?>">
                         <br><br>
                         <input id="date" type="text" class="date" style="min-width: 75%" name="date" value="<?php echo $get_date; ?>" readonly>
                         <br><br>
