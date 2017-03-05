@@ -30,7 +30,7 @@ if (isset($_GET['id'])) {
 <body>
 <?php
 if(isset($_GET['id'])) {
-    $id = (int)$_GET['id'];
+    $id = $_GET['id'];
     /*$q = "SELECT title, entry FROM journal WHERE id='" . $id . "'";
 
 // parse through all passwords in database
