@@ -31,13 +31,13 @@ if (isset($_GET['id'])) {
 <?php
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
-    $q = "SELECT title, entry FROM journal WHERE id=$id";
+    /*$q = "SELECT title, entry FROM journal WHERE id='" . $id . "'";
 
 // parse through all passwords in database
     foreach ($db->query($q) as $row) {
         $title = $row['title'];
         $entry = $row['entry'];
-    }
+    }*/
 }
 ?>
 <div class="container">
