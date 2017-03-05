@@ -31,12 +31,20 @@ if (isset($_GET['id'])) {
 <?php
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
-    $q = "SELECT title, entry FROM journal WHERE id='" . $id . "'";
+    $q = $db->prepare('SELECT title, entry FROM journal WHERE id=$id');
+    $q->bindValue(':title', $id);
+    $q->bindValue(':entry', $id);
+    $q->execute();
+    $results = $q->fetch(PDO::FETCH_ASSOC);
+
+    $title = $results['title'];
+    $entry = $results['entry'];
+    /*$q = "SELECT title, entry FROM journal WHERE id='" . $id . "'";
 
 // parse through all passwords in database
     foreach ($db->query($q) as $row) {
         $title = $row['title'];
-        $entry = $row['entry'];
+        $entry = $row['entry'];*/
     }
 }
 ?>
@@ -47,7 +55,7 @@ if(isset($_GET['id'])) {
                 <fieldset>
                     <legend class="entry_legend">Enter New Entry</legend><br><br>
                     <div class="form_stuff">
-                        <input id="title" type="text" class="login" name="title" placeholder="INSERT TITLE" value="?php echo $id; ?>">
+                        <input id="title" type="text" class="login" name="title" placeholder="INSERT TITLE" value="?php echo $title; ?>">
                         <br><br>
                         <input id="date" type="text" class="date" style="min-width: 75%" name="date" value="<?php echo $get_date; ?>" readonly>
                         <br><br>
